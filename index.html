@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="fr>
+<head>
+    <meta charset="utf-8" />
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+<h1 class="page-title">
+<span>Abréviations</span>
+</h1>
+
+
+<style>
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+  border: 1px solid #ddd; /* Add a grey border */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
+</style>
+    
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher...">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;"><b>Intitulé</b></th>
+    <th style="width:40%;"><b>Abréviation</b></th>
+  </tr>
+
+<tr><td><i>Aanwerven, Tewerkstellen en ontslaan</i><p hidden>Aanwerven, Tewerkstellen en ontslaan ATO <i>ATO</i></p></td><td><i>ATO</i></td></tr>
+<tr><td><i>Accountancy & Fiscaliteit. Wekelijkse nieuwsbrief</i><p hidden>Accountancy & Fiscaliteit Wekelijkse nieuwsbrief Acc & Fisc <i>Acc. & Fisc.</i></p></td><td><i>Acc. & Fisc.</i></td></tr>
+<tr><td><i>Accountancy Actualiteit</i><p hidden>Accountancy Actualiteit Acc Act <i>Acc. Act.</i></p></td><td><i>Acc. Act.</i></td></tr>
+<tr><td><i>Actualité législative Dalloz</i><p hidden>Actualite legislative Dalloz ALD <i>A.L.D.</i></p></td><td><i>A.L.D.</i></td></tr>
+<tr><td><i>Actualités du droit</i><p hidden>Actualites du droit Act dr <i>Act. dr.</i></p></td><td><i>Act. dr.</i></td></tr>
+<tr><td><i>Actualités du droit de la famille</i><p hidden>Actualites du droit de la famille Act dr fam <i>Act. dr. fam.</i></p></td><td><i>Act. dr. fam.</i></td></tr>
+<tr><td><i>Actualités fiscales</i><p hidden>Actualites fiscales Act fisc <i>Act. fisc.</i></p></td><td><i>Act. fisc.</i></td></tr>
+<tr><td><i>Actualités juridiques</i><p hidden>Actualites juridiques Act jur <i>Act. jur.</i></p></td><td><i>Act. jur.</i></td></tr>
+<tr><td><i>Actualités juridiques des baux</i><p hidden>Actualites juridiques des baux Act jur baux <i>Act. jur. baux</i></p></td><td><i>Act. jur. baux</i></td></tr>
+<tr><td><i>Actualités sociales</i><p hidden>Actualites sociales Act soc <i>Act. soc.</i></p></td><td><i>Act. soc.</i></td></tr>
+<tr><td><i>Ad Rem</i><p hidden>Ad Rem Ad Rem <i>Ad Rem</i></p></td><td><i>Ad Rem</i></td></tr>
+<tr><td><i>Addendum</i> (ou additionnel)<p hidden>Addendum additionnel add<i>add.</i></p></td><td><i>add.</i></td></tr>
+<tr><td>Adjoint<p hidden>Adjoint adj adj.</p></td><td>adj.</td></tr>
+<tr><td><i>Administratief en gerechtelijk jaarboek voor België</i><p hidden>Administratief en gerechtelijk jaarboek voor België AGJB <i>A.G.J.B.</i></p></td><td><i>A.G.J.B.</i></td></tr>
+<tr><td><i>Administratief Lexicon</i><p hidden>Administratief Lexicon Adm Lex AL <i>Adm. Lex. <br> A.L.</i></p></td><td><i>Adm. Lex. <br> A.L.</i></td></tr>
+<tr><td><i>Administration publique</i><p hidden>Administration publique AP <i>A.P.</i></p></td><td><i>A.P.</i></td></tr>
+<tr><td><i>Administration publique – mensuel</i><p hidden>Administration publique  mensuel APM <i>A.P.M.</i></p></td><td><i>A.P.M.</i></td></tr>
+<tr><td><i>Administration publique – trimestriel</i><p hidden>Administration publique  trimestriel APT <i>A.P.T.</i></p></td><td><i>A.P.T.</i></td></tr>
+<tr><td><i>Administrer</i><p hidden>Administrer Administrer <i>Administrer</i></p></td><td><i>Administrer</i></td></tr>
+<tr><td><i>Advokaten Praktijk</i><p hidden>Advokaten Praktijk AP <i>A.P.</i></p></td><td><i>A.P.</i></td></tr>
+<tr><td>Affaire<p hidden>Affaire aff aff.</p></td><td>aff.</td></tr>
+<tr><td>Ajouter<p hidden>Ajouter adde <i>adde</i></p></td><td><i>adde</i></td></tr>
+<tr><td><i>Algemeen fiscaal tijdschrift</i><p hidden>Algemeen fiscaal tijdschrift AFT <i>A.F.T.</i></p></td><td><i>A.F.T.</i></td></tr>
+<tr><td><i>Algemeen juridisch tijdschrift</i><p hidden>Algemeen juridisch tijdschrift AJT <i>A.J.T.</i></p></td><td><i>A.J.T.</i></td></tr>
+<tr><td><i>Algemene modellenverzameling voor de rechtspraktijk</i><p hidden>Algemene modellenverzameling voor de rechtspraktijk AMR <i>A.M.R.</i></p></td><td><i>A.M.R.</i></td></tr>
+<tr><td><i>Algemene Praktische Rechtsverzameling</i><p hidden>Algemene Praktische Rechtsverzameling APR <i>A.P.R.</i></p></td><td><i>A.P.R.</i></td></tr>
+<tr><td>Alinéa<p hidden>Alinea al al.</p></td><td>al.</td></tr>
+<tr><td><i>Aménagement du territoire et droit foncier</i><p hidden>Amenagement du territoire et droit foncier ATDF <i>A.T.D.F.</i></p></td><td><i>A.T.D.F.</i></td></tr>
+<tr><td><i>Aménagement-environnement</i><p hidden>Amenagement-environnement Amen <i>Amén.</i></p></td><td><i>Amén.</i></td></tr>
+<tr><td><i>American Journal of International Law</i><p hidden>American Journal of International Law AJIL <i>A.J.I.L.</i></p></td><td><i>A.J.I.L.</i></td></tr>
+<tr><td><i>Annales de droit de Liège</i><p hidden>Annales de droit de Liege Ann dr Lg Ann dr Liege <i>Ann. dr. Lg. <br> Ann. dr. Liège</i></p></td><td><i>Ann. dr. Lg. <br> Ann. dr. Liège</i></td></tr>
+<tr><td><i>Annales de droit de Louvain / Louvain Law Review</i><p hidden>Annales de droit de Louvain  Louvain Law Review Ann dr / LLR <i>Ann. dr. / L.L.R.</i></p></td><td><i>Ann. dr. / L.L.R.</i></td></tr>
+<tr><td><i>Annales de droit et de sciences politiques (Louvain)</i><p hidden>Annales de droit et de sciences politiques Louvain Ann dr sc pol <i>Ann. dr. sc. pol.</i></p></td><td><i>Ann. dr. sc. pol.</i></td></tr>
+<tr><td><i>Annales de la Faculté de droit, d'économie et de sciences sociales de Liège</i><p hidden>Annales de la Faculte de droit, d'economie et de sciences sociales de Liege Ann Fac dr Lg Ann Fac dr Liege <i>Ann. Fac. dr. Lg</i><br><i>Ann. Fac. dr. Liège</i></p></td><td><i>Ann. Fac. dr. Lg</i><br><i>Ann. Fac. dr. Liège</i></td></tr>
+<tr><td><i>Annales de l'Économie publique, sociale et coopérative</i><p hidden>Annales de l'economie publique, sociale et cooperative Ann Econ publ soc et coop <i>Ann. Econ. publ. soc. et coop.</i></p></td><td><i>Ann. Econ. publ. soc. et coop.</i></td></tr>
+<tr><td><i>Annales d'études européennes de l'Université catholique de Louvain</i><p hidden>Annales d'etudes europeennes de l Universite catholique de Louvain Ann et eur <i>Ann. ét. eur.</i></p></td><td><i>Ann. ét. eur.</i></td></tr>
+<tr><td><i>Annales du Notariat et de l'Enregistrement</i><p hidden>Annales du Notariat et de l'Enregistrement Ann Not <i>Ann. Not.</i></p></td><td><i>Ann. Not.</i></td></tr>
+<tr><td><i>Annales internationales de criminologie</i><p hidden>Annales internationales de criminologie Ann intern crim <i>Ann. intern. crim.</i></p></td><td><i>Ann. intern. crim.</i></td></tr>
+<tr><td><i>Annales parlementaires</i><p hidden>Annales parlementaires Ann parl <i>Ann. parl.</i></p></td><td><i>Ann. parl.</i></td></tr>
+<tr><td><i>Annuaire administratif et judiciaire de Belgique</i><p hidden>Annuaire administratif et judiciaire de Belgique AAJB <i>A.A.J.B.</i></p></td><td><i>A.A.J.B.</i></td></tr>
+<tr><td><i>Annuaire francais de droit international</i><p hidden>Annuaire francais de droit international Ann fr dr intern <i>Ann. fr. dr. intern.</i></p></td><td><i>Ann. fr. dr. intern.</i></td></tr>
+<tr><td><i>Annuaire juridique du crédit</i><p hidden>Annuaire juridique du credit Ann jur cred <i>Ann. jur. créd.</i></p></td><td><i>Ann. jur. créd.</i></td></tr>
+<tr><td><i>Annuaire juridique du crédit et du règlement collectif de dettes</i><p hidden>Annuaire juridique du credit et du reglement collectif de dettes Ann jur cred regl coll <i>Ann. jur. créd. règl. coll.</i></p></td><td><i>Ann. jur. créd. règl. coll.</i></td></tr>
+<tr><td><i>Annuaire pratiques du commerce</i><p hidden>Annuaire pratiques du commerce Ann prat comm <i>Ann. prat. comm.</i></p></td><td><i>Ann. prat. comm.</i></td></tr>
+<tr><td><i>Annuaire pratiques du commerce & concurrence</i><p hidden>Annuaire pratiques du commerce & concurrence Ann prat comm conc <i>Ann. prat. comm. conc.</i></p></td><td><i>Ann. prat. comm. conc.</i></td></tr>
+<tr><td><i>Annuaire pratiques du marché, propriété intellectuelle et concurrence</i><p hidden>Annuaire pratiques du marche, propriete intellectuelle et concurrence Ann prat marche <i>Ann. prat. marché</i></p></td><td><i>Ann. prat. marché</i></td></tr>
+<tr><td><i>Arbeidsblad</i><p hidden>Arbeidsblad Arbbl <i>Arbbl.</i></p></td><td><i>Arbbl.</i></td></tr>
+<tr><td><i>Arbitragehof. Arresten</i><p hidden>Arbitragehof Arresten Arr Arb <i>Arr. Arb.</i></p></td><td><i>Arr. Arb.</i></td></tr>
+<tr><td><i>Arresten Grondwettelijk Hof</i><p hidden>Arresten Grondwettelijk Hof Arr GwH <i>Arr. GwH</i></p></td><td><i>Arr. GwH</i></td></tr>
+<tr><td><i>Arresten van het Hof van Cassatie</i><p hidden>Arresten van het Hof van Cassatie Arr Cass <i>Arr. Cass.</i></p></td><td><i>Arr. Cass.</i></td></tr>
+<tr><td><i>Arresten van het Hof van Verbreking</i><p hidden>Arresten van het Hof van Verbreking Arr Verbr <i>Arr. Verbr.</i></p></td><td><i>Arr. Verbr.</i></td></tr>
+<tr><td>Arrêté<p hidden>Arrete A A.</p></td><td>A.</td></tr>
+<tr><td>Arrêté communal<p hidden>Arrete communal A comm A. comm.</p></td><td>A. comm.</td></tr>
+<tr><td>Arrêté de l'Exécutif<p hidden>Arrete de l'Executif A Ex A. Ex.</p></td><td>A. Ex.</td></tr>
+<tr><td>Arrêté du Collège de la Commission communautaire flamande<p hidden>Arrete du College de la Commission communautaire flamande A Coll CC fl A. Coll. C.C. fl.</p></td><td>A. Coll. C.C. fl.</td></tr>
+<tr><td>Arrêté du Collège de la Commission communautaire francaise<p hidden>Arrete du College de la Commission communautaire francaise A Coll CC fr A. Coll. C.C. fr.</p></td><td>A. Coll. C.C. fr.</td></tr>
+<tr><td>Arrêté du Collège réuni de la Commission communautaire commune<p hidden>Arrete du College reuni de la Commission communautaire commune A Coll reun CCC A. Coll. réun. C.C.C.</p></td><td>A. Coll. réun. C.C.C.</td></tr>
+<tr><td>Arrêté du Conseil provincial<p hidden>Arrete du Conseil provincial A Cons prov A. Cons. prov.</p></td><td>A. Cons. prov.</td></tr>
+<tr><td>Arrêté du Gouvernement<p hidden>Arrete du Gouvernement A Gouv A. Gouv.</p></td><td>A. Gouv.</td></tr>
+<tr><td>Arrêté du gouvernement de la Communauté francaise<p hidden>Arrete du gouvernement de la Communaute francaise A Gouv Comm fr A. Gouv. Comm. fr.</p></td><td>A. Gouv. Comm. fr.</td></tr>
+<tr><td>Arrêté du gouvernement de la Communauté germanophone<p hidden>Arrete du gouvernement de la Communaute germanophone A Gouv Comm germ A. Gouv. Comm. germ.</p></td><td>A. Gouv. Comm. germ.</td></tr>
+<tr><td>Arrêté du gouvernement de la Région de Bruxelles-Capitale<p hidden>Arrete du gouvernement de la Region de Bruxelles-Capitale A Gouv Reg BruxCap A. Gouv. Rég. Brux.-Cap.</p></td><td>A. Gouv. Rég. Brux.-Cap.</td></tr>
+<tr><td>Arrêté du gouvernement de la Région wallonne<p hidden>Arrete du gouvernement de la Region wallonne A Gouv w A. Gouv. w.</p></td><td>A. Gouv. w.</td></tr>
+<tr><td>Arrêté du gouvernement flamand<p hidden>Arrete du gouvernement flamand A Gouv fl A. Gouv. fl.</p></td><td>A. Gouv. fl.</td></tr>
+<tr><td>Arrêté du Régent<p hidden>Arrete du Regent A Reg A. Rég.</p></td><td>A. Rég.</td></tr>
+<tr><td>Arrêté ministériel<p hidden>Arrete ministeriel AM A.M.</p></td><td>A.M.</td></tr>
+<tr><td>Arrêté ministériel (Communauté et Région flamande)<p hidden>Arrete ministeriel Communaute et Region flamande AM fl A.M. (fl.)</p></td><td>A.M. (fl.)</td></tr>
+<tr><td>Arrêté ministériel (Communauté francaise)<p hidden>Arrete ministeriel Communaute francaise AM Comm fr A.M. (Comm. fr.)</p></td><td>A.M. (Comm. fr.)</td></tr>
+<tr><td>Arrêté ministériel (Communauté germanophone)<p hidden>Arrete ministeriel Communaute germanophone AM Comm germ A.M. (Comm. germ.)</p></td><td>A.M. (Comm. germ.)</td></tr>
+<tr><td>Arrêté ministériel (Région de Bruxelles-Capitale)<p hidden>Arrete ministeriel Region de Bruxelles-Capitale AM Reg BruxCap A.M. (Rég. Brux.-Cap.)</p></td><td>A.M. (Rég. Brux.-Cap.)</td></tr>
+<tr><td>Arrêté ministériel (Région wallonne)<p hidden>Arrete ministeriel Region wallonne AM Reg w A.M. (Rég. w.)</p></td><td>A.M. (Rég. w.)</td></tr>
+<tr><td>Arrêté provincial<p hidden>Arrete provincial A Prov A. Prov.</p></td><td>A. Prov.</td></tr>
+<tr><td>Arrêté royal<p hidden>Arrete royal AR A.R.</p></td><td>A.R.</td></tr>
+<tr><td>Arrêté royal de pouvoirs spéciaux (n°)<p hidden>Arrete royal de pouvoirs speciaux AR A.R. n°</p></td><td>A.R. n°</td></tr>
+<tr><td>Arrêté-loi<p hidden>Arrete-loi AL A.-L.</p></td><td>A.-L.</td></tr>
+<tr><td>Arrêté-loi de pouvoirs extraordinaires<p hidden>Arrete-loi de pouvoirs extraordinaires AL pouv extr A.-L. pouv. extr.</p></td><td>A.-L. pouv. extr.</td></tr>
+<tr><td><i>Arrêts de la Cour constitutionnelle</i><p hidden>Arrets de la Cour constitutionnelle ACC <i>A.C.C.</i></p></td><td><i>A.C.C.</i></td></tr>
+<tr><td><i>Arrêts de la Cour d'arbitrage</i><p hidden>Arrets de la Cour d'arbitrage CAA <i>C.A.-A.</i></p></td><td><i>C.A.-A.</i></td></tr>
+<tr><td>Article<p hidden>Article art art.</p></td><td>art.</td></tr>
+<tr><td><i>Artikelsgewijze commentaar Gerechtelijk recht</i><p hidden>Artikelsgewijze commentaar Gerechtelijk recht Comm Ger <i>Comm. Ger.</i></p></td><td><i>Comm. Ger.</i></td></tr>
+<tr><td><i>Artikelsgewijze commentaar Personen- en familierecht</i><p hidden>Artikelsgewijze commentaar Personen- en familierecht Comm Pers <i>Comm. Pers.</i></p></td><td><i>Comm. Pers.</i></td></tr>
+<tr><td><i>Artikelsgewijze commentaar Publiek procesrecht</i><p hidden>Artikelsgewijze commentaar Publiek procesrecht Comm Pub <i>Comm. Pub.</i></p></td><td><i>Comm. Pub.</i></td></tr>
+<tr><td><i>Artikelsgewijze commentaar Vennootschappen en verenigingen</i><p hidden>Artikelsgewijze commentaar Vennootschappen en verenigingen Comm V en V <i>Comm. V. en V.</i></p></td><td><i>Comm. V. en V.</i></td></tr>
+<tr><td><i>Artikelsgewijze commentaar Vennootschapsrecht</i><p hidden>Artikelsgewijze commentaar Vennootschapsrecht Comm Venn <i>Comm. Venn.</i></p></td><td><i>Comm. Venn.</i></td></tr>
+<tr><td><i>Artikelsgewijze commentaar Verzekeringen</i><p hidden>Artikelsgewijze commentaar Verzekeringen Comm Verz <i>Comm. Verz.</i></p></td><td><i>Comm. Verz.</i></td></tr>
+<tr><td><i>Artikelsgewijze commentaar Voorrechten en hypotheken</i><p hidden>Artikelsgewijze commentaar Voorrechten en hypotheken Comm Voor <i>Comm. Voor.</i></p></td><td><i>Comm. Voor.</i></td></tr>
+<tr><td>Assemblée<p hidden>Assemblee ass ass.</p></td><td>ass.</td></tr>
+<tr><td>Assemblée de la Commission communautaire commune<p hidden>Assemblee de la Commission communautaire commune Ass reun CCC Ass. réun. C.C.C.</p></td><td>Ass. réun. C.C.C.</td></tr>
+<tr><td>Assemblée de la Commission communautaire francaise<p hidden>Assemblee de la Commission communautaire francaise Ass reun CC fr Ass. réun. C.C. fr.</p></td><td>Ass. réun. C.C. fr.</td></tr>
+<tr><td>Assemblée plénière<p hidden>Assemblee pleniere ass plen ass. plén.</p></td><td>ass. plén.</td></tr>
+<tr><td>Association européenne de libre échange<p hidden>Association europeenne de libre echange AELE A.E.L.E.</p></td><td>A.E.L.E.</td></tr>
+<tr><td>Audience plénière<p hidden>Audience pleniere Aud plen Aud. plén.</p></td><td>Aud. plén.</td></tr>
+<tr><td>Auditeur (ou Auditorat)<p hidden>Auditeur Auditorat Aud Aud.</p></td><td>Aud.</td></tr>
+<tr><td>Auditeur adjoint<p hidden>Auditeur adjoint Aud adj Aud. adj.</p></td><td>Aud. adj.</td></tr>
+<tr><td>Auditeur du travail<p hidden>Auditeur du travail Aud trav Aud. trav.</p></td><td>Aud. trav.</td></tr>
+<tr><td>Auditeur général<p hidden>Auditeur general Aud gen Aud. gén.</p></td><td>Aud. gén.</td></tr>
+<tr><td>Auditeur général adjoint<p hidden>Auditeur general adjoint Aud gen adj Aud. gén. adj.</p></td><td>Aud. gén. adj.</td></tr>
+<tr><td>Auditeur militaire<p hidden>Auditeur militaire Aud mil Aud. mil.</p></td><td>Aud. mil.</td></tr>
+<tr><td><i>Ausführlicher Bericht</i><p hidden>Ausführlicher Bericht Ausf Ber <i>Ausf. Ber.</i></p></td><td><i>Ausf. Ber.</i></td></tr>
+<tr><td><i>Auteurs et média</i><p hidden>Auteurs et media A&M AM <i>A&M <br> A.M.</i></p></td><td><i>A&M <br> A.M.</i></td></tr>
+<tr><td>Avocat<p hidden>Avocat Av Plaid Av. <br> Plaid.</p></td><td>Av. <br> Plaid.</td></tr>
+<tr><td>Avocat général<p hidden>Avocat general Av gen Av. gén.</p></td><td>Av. gén.</td></tr>
+<tr><td><i>Balans</i><p hidden>Balans Balans <i>Balans</i></p></td><td><i>Balans</i></td></tr>
+<tr><td><i>Bank- en financieel recht</i><p hidden>Bank- en financieel recht Bank Fin R BFR <i>Bank Fin. R. <br> B.F.R.</i></p></td><td><i>Bank Fin. R. <br> B.F.R.</i></td></tr>
+<tr><td><i>Bank- en financiewezen</i><p hidden>Bank- en financiewezen Bank Fin <i>Bank Fin.</i></p></td><td><i>Bank Fin.</i></td></tr>
+<tr><td><i>Bank- en financiewezen. Cahiers</i><p hidden>Bank- en financiewezen Cahiers Bank Fin Cah Cahiers <i>Bank Fin. (Cah.)</i></p></td><td><i>Bank Fin. (Cah.)</i></td></tr>
+<tr><td><i>Banque</i><p hidden>Banque Banque <i>Banque</i></p></td><td><i>Banque</i></td></tr>
+<tr><td><i>b-Arbitra – Revue belge de l'arbitrage</i><p hidden>b Arbitra. Revue belge de l'arbitrage b Arbitra <i>b-Arbitra</i></p></td><td><i>b-Arbitra</i></td></tr>
+<tr><td><i>Beginselen van Belgisch Privaatrecht</i><p hidden>Beginselen van Belgisch Privaatrecht BBPR <i>B.B.P.R.</i></p></td><td><i>B.B.P.R.</i></td></tr>
+<tr><td><i>Beknopt Verslag</i><p hidden>Beknopt Verslag B Versl <i>B. Versl.</i></p></td><td><i>B. Versl.</i></td></tr>
+<tr><td>Belge<p hidden>Belge b b.</p></td><td>b.</td></tr>
+<tr><td><i>Belgian Review of International Law</i><p hidden>Belgian Review of International Law BRIL <i>BRIL</i></p></td><td><i>BRIL</i></td></tr>
+<tr><td><i>Belgique judiciaire</i><p hidden>Belgique judiciaire BJ <i>B.J.</i></p></td><td><i>B.J.</i></td></tr>
+<tr><td><i>Belgisch tijdschrift voor internationaal recht</i><p hidden>Belgisch tijdschrift voor internationaal recht B t intern r <i>B. t. intern. r.</i></p></td><td><i>B. t. intern. r.</i></td></tr>
+<tr><td><i>Belgisch tijdschrift voor sociale zekerheid</i><p hidden>Belgisch tijdschrift voor sociale zekerheid B t soc zek BTSZ <i>B. t. soc. zek. <br> B.T.S.Z.</i></p></td><td><i>B. t. soc. zek. <br> B.T.S.Z.</i></td></tr>
+<tr><td><i>Belgische rechtspraak in handelszaken</i><p hidden>Belgische rechtspraak in handelszaken BRH <i>B.R.H.</i></p></td><td><i>B.R.H.</i></td></tr>
+<tr><td>Bibliothèque<p hidden>Bibliotheque bibl bibl.</p></td><td>bibl.</td></tr>
+<tr><td><i>Bijblad bij de Industriële Eigendom</i><p hidden>Bijblad bij de Industriële Eigendom Bijbl Ind Eig <i>Bijbl. Ind. Eig.</i></p></td><td><i>Bijbl. Ind. Eig.</i></td></tr>
+<tr><td><i>Bulletin Benelux</i><p hidden>Bulletin Benelux Bull Benelux <i>Bull. Benelux</i></p></td><td><i>Bull. Benelux</i></td></tr>
+<tr><td><i>Bulletin de documentation du ministère des Finances</i><p hidden>Bulletin de documentation du ministere des Finances Bull doc min fin <i>Bull. doc. min. fin.</i></p></td><td><i>Bull. doc. min. fin.</i></td></tr>
+<tr><td><i>Bulletin de documentation fiscale internationale</i><p hidden>Bulletin de documentation fiscale internationale Bull doc fisc intern <i>Bull. doc. fisc. intern.</i></p></td><td><i>Bull. doc. fisc. intern.</i></td></tr>
+<tr><td><i>Bulletin de droit fiscal et financier</i><p hidden>Bulletin de droit fiscal et financier Bull dr fisc fin <i>Bull. dr. fisc. fin.</i></p></td><td><i>Bull. dr. fisc. fin.</i></td></tr>
+<tr><td><i>Bulletin de la Classe des Lettres et de Sciences morales et politiques de l'Académie royale de Belgique</i><p hidden>Bulletin de la Classe des Lettres et de Sciences morales et politiques de l'Academie royale de Belgique Bull Cl L et Sc mor pol Acad r Belg <i>Bull. Cl. L. et Sc. mor. pol. Acad. r. Belg.</i></p></td><td><i>Bull. Cl. L. et Sc. mor. pol. Acad. r. Belg.</i></td></tr>
+<tr><td><i>Bulletin de la Commission des normes comptables</i><p hidden>Bulletin de la Commission des normes comptables Bull CNC <i>Bull. C.N.C.</i></p></td><td><i>Bull. C.N.C.</i></td></tr>
+<tr><td><i>Bulletin de la Fédération des entreprises de Belgique</i><p hidden>Bulletin de la Federation des entreprises de Belgique Bull FEB <i>Bull. F.E.B.</i></p></td><td><i>Bull. F.E.B.</i></td></tr>
+<tr><td><i>Bulletin de la Fédération nationale des Secrétaires communaux de Belgique</i><p hidden>Bulletin de la Federation nationale des Secretaires communaux de Belgique Bull Secr comm <i>Bull. Secr. comm.</i></p></td><td><i>Bull. Secr. comm.</i></td></tr>
+<tr><td><i>Bulletin de la Fondation André Renard</i><p hidden>Bulletin de la Fondation Andre Renard BFAR <i>B.F.A.R.</i></p></td><td><i>B.F.A.R.</i></td></tr>
+<tr><td><i>Bulletin de la jurisprudence immobilière et de la construction</i><p hidden>Bulletin de la jurisprudence immobiliere et de la construction Bull jur imm <i>Bull. jur. imm.</i></p></td><td><i>Bull. jur. imm.</i></td></tr>
+<tr><td><i>Bulletin de l'administration pénitentiaire</i><p hidden>Bulletin de l'administration penitentiaire Bull adm penit <i>Bull. adm. pénit.</i></p></td><td><i>Bull. adm. pénit.</i></td></tr>
+<tr><td><i>Bulletin de l'Union des secrétariats sociaux agréés d'employeurs</i><p hidden>Bulletin de l'Union des secretariats sociaux agrees d'employeurs Bull inf ass secr soc <i>Bull. inf. ass. secr. soc.</i></p></td><td><i>Bull. inf. ass. secr. soc.</i></td></tr>
+<tr><td><i>Bulletin des arrêts de la Cour de cassation de Belgique</i><p hidden>Bulletin des arrets de la Cour de cassation de Belgique Bull <i>Bull.</i></p></td><td><i>Bull.</i></td></tr>
+<tr><td><i>Bulletin des assurances</i><p hidden>Bulletin des assurances Bull ass <i>Bull. ass.</i></p></td><td><i>Bull. ass.</i></td></tr>
+<tr><td><i>Bulletin des contributions</i><p hidden>Bulletin des contributions Bull contr <i>Bull. contr.</i></p></td><td><i>Bull. contr.</i></td></tr>
+<tr><td><i>Bulletin des questions et réponses</i><p hidden>Bulletin des questions et reponses Bull Q R <i>Bull. Q. R.</i></p></td><td><i>Bull. Q. R.</i></td></tr>
+<tr><td><i>Bulletin d'information de l'association des secrétariats sociaux agréés d'employeurs</i><p hidden>Bulletin d information de l'association des secretariats sociaux agrees d'employeurs Bull inf ass secr soc <i>Bull. inf. ass. secr. soc.</i></p></td><td><i>Bull. inf. ass. secr. soc.</i></td></tr>
+<tr><td><i>Bulletin d'information de l'I.N.A.M.I.</i><p hidden>Bulletin d information de l'INAMI Bull inf INAMI BIINAMI <i>Bull. inf. I.N.A.M.I.<br>B.I.-I.N.A.M.I.</i></p></td><td><i>Bull. inf. I.N.A.M.I.<br>B.I.-I.N.A.M.I.</i></td></tr>
+<tr><td><i>Bulletin d'information sur les droits de l'homme</i><p hidden>Bulletin d'information sur les droits de l'homme Bull Dr h <i>Bull. Dr. h.</i></p></td><td><i>Bull. Dr. h.</i></td></tr>
+<tr><td><i>Bulletin d'information. Institut des experts-comptables</i><p hidden>Bulletin d'information Institut des experts-comptables Bull inf IEC <i>Bull. inf. I.E.C.</i></p></td><td><i>Bull. inf. I.E.C.</i></td></tr>
+<tr><td><i>Bulletin d'information. Institut des réviseurs d'entreprises</i><p hidden>Bulletin d'information Institut des reviseurs d'entreprises Bull inf IRE <i>Bull. inf. I.R.E.</i></p></td><td><i>Bull. inf. I.R.E.</i></td></tr>
+<tr><td><i>Bulletin fiduciaire</i><p hidden>Bulletin fiduciaire Bull fid <i>Bull. fid.</i></p></td><td><i>Bull. fid.</i></td></tr>
+<tr><td><i>Bulletin législatif belge</i><p hidden>Bulletin legislatif belge B L Bull leg b <i>B. L. <br> Bull. lég. b.</i></p></td><td><i>B. L. <br> Bull. lég. b.</i></td></tr>
+<tr><td><i>Bulletin of Comparative Labour Relations</i><p hidden>Bulletin of Comparative Labour Relations BCLR <i>B.C.L.R.</i></p></td><td><i>B.C.L.R.</i></td></tr>
+<tr><td><i>Bulletin officiel des lois et arrêtés royaux de la Belgique</i><p hidden>Bulletin officiel des lois et arretes royaux de la Belgique Bull off <i>Bull. off.</i></p></td><td><i>Bull. off.</i></td></tr>
+<tr><td><i>Bulletin trimestriel belge de droit comparé</i><p hidden>Bulletin trimestriel belge de droit compare Bull trim b dr comp <i>Bull. trim. b. dr. comp.</i></p></td><td><i>Bull. trim. b. dr. comp.</i></td></tr>
+<tr><td><i>Bulletin van vragen en antwoorden</i><p hidden>Bulletin van vragen en antwoorden Vr Ant Vl Parl <i>Vr. Ant. Vl. Parl.</i></p></td><td><i>Vr. Ant. Vl. Parl.</i></td></tr>
+<tr><td>Bureau d'aide juridique<p hidden>Bureau d'aide juridique BAJ B.A.J.</p></td><td>B.A.J.</td></tr>
+<tr><td>Bureau d'assistance judiciaire<p hidden>Bureau d'assistance judiciaire Bur ass jud Bur. ass. jud.</p></td><td>Bur. ass. jud.</td></tr>
+<tr><td><i>Burger, bestuur en beleid</i><p hidden>Burger, bestuur en beleid Bb&b <i>Bb&b</i></p></td><td><i>Bb&b</i></td></tr>
+<tr><td><i>Cahier de la Cour des comptes</i><p hidden>Cahier de la Cour des comptes Cah C comptes <i>Cah. C. comptes</i></p></td><td><i>Cah. C. comptes</i></td></tr>
+<tr><td><i>Cahier du juriste</i><p hidden>Cahier du juriste CJ Cah jur <i>C.J. <br> Cah. jur.</i></p></td><td><i>C.J. <br> Cah. jur.</i></td></tr>
+<tr><td><i>Cahier van de jurist</i><p hidden>Cahier van de jurist CJ <i>C.J.</i></p></td><td><i>C.J.</i></td></tr>
+<tr><td>Cahiers<p hidden>Cahiers cah cah.</p></td><td>cah.</td></tr>
+<tr><td><i>Cahiers A.E.D.B.F. / EVBFR – Belgium</i><p hidden>Cahiers AEDBF EVBFR  Belgium Cah AEDBF EVBFR  Belgium <i>Cah. A.E.D.B.F. / E.V.B.F.R. – Belgium</i></p></td><td><i>Cah. A.E.D.B.F. / E.V.B.F.R. – Belgium</i></td></tr>
+<tr><td><i>Cahiers CEPESS</i><p hidden>Cahiers CEPESS Cah CEPESS <i>Cah. CEPESS</i></p></td><td><i>Cah. CEPESS</i></td></tr>
+<tr><td><i>Cahiers de criminologie et de pathologie sociale (U.C.L.)</i><p hidden>Cahiers de criminologie et de pathologie sociale UCL Cah crim <i>Cah. crim.</i></p></td><td><i>Cah. crim.</i></td></tr>
+<tr><td><i>Cahiers de droit de l'entreprise</i><p hidden>Cahiers de droit de l'entreprise Cah dr entr JCP E <i>Cah. dr. entr.</i><br><i> J.C.P. E.</i></p></td><td><i>Cah. dr. entr.</i><br><i> J.C.P. E.</i></td></tr>
+<tr><td><i>Cahiers de droit européen</i><p hidden>Cahiers de droit europeen CDE <i>C.D.E.</i></p></td><td><i>C.D.E.</i></td></tr>
+<tr><td><i>Cahiers de droit familial</i><p hidden>Cahiers de droit familial Cah dr fam <i>Cah. dr. fam.</i></p></td><td><i>Cah. dr. fam.</i></td></tr>
+<tr><td><i>Cahiers de droit fiscal international</i><p hidden>Cahiers de droit fiscal international CDFI Cah dr fisc intern <i>C.D.F.I. <br> Cah. dr. fisc. intern.</i></p></td><td><i>C.D.F.I. <br> Cah. dr. fisc. intern.</i></td></tr>
+<tr><td><i>Cahiers de droit immobilier</i><p hidden>Cahiers de droit immobilier Cah dr immo <i>Cah. dr. immo.</i></p></td><td><i>Cah. dr. immo.</i></td></tr>
+<tr><td><i>Cahiers de droit judiciaire</i><p hidden>Cahiers de droit judiciaire Cah dr jud <i>Cah. dr. jud.</i></p></td><td><i>Cah. dr. jud.</i></td></tr>
+<tr><td><i>Cahiers de la Faculté de droit de Namur</i><p hidden>Cahiers de la Faculte de droit de Namur Cah Fac Dr Namur <i>Cah. Fac. Dr. Namur</i></p></td><td><i>Cah. Fac. Dr. Namur</i></td></tr>
+<tr><td><i>Cahiers de la médiation des dettes</i><p hidden>Cahiers de la mediation des dettes Cah med dettes <i>Cah. méd. dettes</i></p></td><td><i>Cah. méd. dettes</i></td></tr>
+<tr><td><i>Cahiers du CRID</i><p hidden>Cahiers du CRID Cah CRID <i>Cah. CRID</i></p></td><td><i>Cah. CRID</i></td></tr>
+<tr><td><i>Cahiers Lamy du droit de l'informatique</i><p hidden>Cahiers Lamy du droit de l'informatique Cah Dr Inf <i>Cah. Dr. Inf.</i></p></td><td><i>Cah. Dr. Inf.</i></td></tr>
+<tr><td>canton<p hidden>canton cant cant.</p></td><td>cant.</td></tr>
+<tr><td>chambre (d'une juridiction)<p hidden>chambre ch ch.</p></td><td>ch.</td></tr>
+<tr><td>Chambre civile<p hidden>Chambre civile civ civ.</p></td><td>civ.</td></tr>
+<tr><td>Chambre commerciale<p hidden>Chambre commerciale comm comm.</p></td><td>comm.</td></tr>
+<tr><td>Chambre correctionnelle<p hidden>Chambre correctionnelle corr corr.</p></td><td>corr.</td></tr>
+<tr><td>Chambre criminelle<p hidden>Chambre criminelle crim crim.</p></td><td>crim.</td></tr>
+<tr><td>Chambre de la jeunesse<p hidden>Chambre de la jeunesse jeun jeun.</p></td><td>jeun.</td></tr>
+<tr><td>Chambre des mises en accusation (de la Cour d'appel)<p hidden>Chambre des mises en accusation mis acc mis. acc.</p></td><td>mis. acc.</td></tr>
+<tr><td>Chambre des représentants<p hidden>Chambre des representants Ch repr Ch. repr.</p></td><td>Ch. repr.</td></tr>
+<tr><td>Chambre des saisies<p hidden>Chambre des saisies sais sais.</p></td><td>sais.</td></tr>
+<tr><td>Chambre des vacations<p hidden>Chambre des vacations vac vac.</p></td><td>vac.</td></tr>
+<tr><td>Chambre du conseil<p hidden>Chambre du conseil ch cons ch. cons.</p></td><td>ch. cons.</td></tr>
+<tr><td>Chambre sociale<p hidden>Chambre sociale soc soc.</p></td><td>soc.</td></tr>
+<tr><td>Chambres réunies<p hidden>Chambres reunies ch reun ch. réun.</p></td><td>ch. réun.</td></tr>
+<tr><td>Chapitre<p hidden>Chapitre chap chap.</p></td><td>chap.</td></tr>
+<tr><td>Charte des droits fondamentaux de l'Union européenne<p hidden>Charte des droits fondamentaux de l'Union europeenne CDFUE C.D.F.U.E.</p></td><td>C.D.F.U.E.</td></tr>
+<tr><td>Charte sociale européenne<p hidden>Charte sociale europeenne CSE C.S.E.</p></td><td>C.S.E.</td></tr>
+<tr><td><i>Chronique de droit a l'usage du notariat</i><p hidden>Chronique de droit a l'usage du notariat Chron dr not Chron not <i>Chron. dr. not.</i><br><i>Chron. not.</i></p></td><td><i>Chron. dr. not.</i><br><i>Chron. not.</i></td></tr>
+<tr><td><i>Chroniques de droit social</i><p hidden>Chroniques de droit social Chr DS Chron DS <i>Chr. D.S. <br> Chron. D.S.</i></p></td><td><i>Chr. D.S. <br> Chron. D.S.</i></td></tr>
+<tr><td><i>Chroniques notariales</i><p hidden>Chroniques notariales Chron not <i>Chron. not.</i></p></td><td><i>Chron. not.</i></td></tr>
+<tr><td>Circulaire ministérielle<p hidden>Circulaire ministerielle Circ min Circ. min.</p></td><td>Circ. min.</td></tr>
+<tr><td><i>Circulation, responsabilité, assurance</i><p hidden>Circulation, responsabilite, assurance CRA <i>C.R.A.</i></p></td><td><i>C.R.A.</i></td></tr>
+<tr><td><i>Cloes et Bonjean. Recueil des tribunaux de première instance</i><p hidden>Cloes et Bonjean Recueil des tribunaux de premiere instance Cl et B <i>Cl. et B.</i></p></td><td><i>Cl. et B.</i></td></tr>
+<tr><td>Code bruxellois de l'aménagement du territoire<p hidden>Code bruxellois de l'amenagement du territoire CoBAT CoBAT</p></td><td>CoBAT</td></tr>
+<tr><td>Code civil<p hidden>Code civil C civ C. civ.</p></td><td>C. civ.</td></tr>
+<tr><td>Code de droit économique<p hidden>Code de droit economique CDE C.D.E.</p></td><td>C.D.E.</td></tr>
+<tr><td>Code de droit international privé<p hidden>Code de droit international prive CODIP CODIP</p></td><td>CODIP</td></tr>
+<tr><td>Code de la démocratie locale et de la décentralisation<p hidden>Code de la democratie locale et de la decentralisation CDLD C.D.L.D.</p></td><td>C.D.L.D.</td></tr>
+<tr><td>Code de la nationalité belge<p hidden>Code de la nationalite belge C nat C. nat.</p></td><td>C. nat.</td></tr>
+<tr><td>Code de la taxe sur la valeur ajoutée<p hidden>Code de la taxe sur la valeur ajoutee CTVA C.T.V.A.</p></td><td>C.T.V.A.</td></tr>
+<tr><td>Code des droits de succession<p hidden>Code des droits de succession C succ C. succ.</p></td><td>C. succ.</td></tr>
+<tr><td>Code des droits de timbre<p hidden>Code des droits de timbre C timbre C. timbre</p></td><td>C. timbre</td></tr>
+<tr><td>Code des droits d'enregistrement, d'hypothèque et de greffe<p hidden>Code des droits d'enregistrement, d'hypotheque et de greffe C enreg C. enreg.</p></td><td>C. enreg.</td></tr>
+<tr><td>Code des impôts sur les revenus<p hidden>Code des impots sur les revenus CIR C.I.R.</p></td><td>C.I.R.</td></tr>
+<tr><td>Code des sociétés et des associations<p hidden>Code des societes et des associations CSA CSA</p></td><td>CSA</td></tr>
+<tr><td>Code d'instruction criminelle<p hidden>Code d'instruction criminelle CICr C.I.Cr.</p></td><td>C.I.Cr.</td></tr>
+<tr><td>Code du développement territorial<p hidden>Code du developpement territorial CoDT CoDT</p></td><td>CoDT</td></tr>
+<tr><td>Code du recouvrement amiable et forcé des créances fiscales et non fiscales<p hidden>Code du recouvrement amiable et force des creances fiscales et non fiscales CRAF CRAF</p></td><td>CRAF</td></tr>
+<tr><td>Code électoral<p hidden>Code electoral C elect C. élect.</p></td><td>C. élect.</td></tr>
+<tr><td>Code flamand de la fiscalité<p hidden>Code flamand de la fiscalite CFF C.F.F.</p></td><td>C.F.F.</td></tr>
+<tr><td>Code forestier<p hidden>Code forestier C for C. for.</p></td><td>C. for.</td></tr>
+<tr><td>Code judiciaire<p hidden>Code judiciaire C jud C. jud.</p></td><td>C. jud.</td></tr>
+<tr><td>Code pénal<p hidden>Code penal C pen C. pén.</p></td><td>C. pén.</td></tr>
+<tr><td>Code pénal militaire<p hidden>Code penal militaire C pen mil C. pén. mil.</p></td><td>C. pén. mil.</td></tr>
+<tr><td>Code rural<p hidden>Code rural C rur C. rur.</p></td><td>C. rur.</td></tr>
+<tr><td>Codification<p hidden>Codification cod cod.</p></td><td>cod.</td></tr>
+<tr><td>Coédition (ou coéditeur·rice)<p hidden>Coedition coediteur coeditrice coed coéd.</p></td><td>coéd.</td></tr>
+<tr><td>Collaboration (ou collaborateur·rice)<p hidden>Collaboration collaborateur collaboratrice collab collab.</p></td><td>collab.</td></tr>
+<tr><td>Collection<p hidden>Collection coll coll.</p></td><td>coll.</td></tr>
+<tr><td>Collection scientifique<p hidden>Collection scientifique coll sc coll. sc.</p></td><td>coll. sc.</td></tr>
+<tr><td>Collège<p hidden>College Coll Coll.</p></td><td>Coll.</td></tr>
+<tr><td>Collège réuni<p hidden>College reuni Coll Reuni Coll. Réuni</p></td><td>Coll. Réuni</td></tr>
+<tr><td>Colonne<p hidden>Colonne col col.</p></td><td>col.</td></tr>
+<tr><td><i>Columbia Journal of European Law</i><p hidden>Columbia Journal of European Law Col J Eur L <i>Col. J. Eur. L.</i></p></td><td><i>Col. J. Eur. L.</i></td></tr>
+<tr><td><i>Columbia Journal of Transnational Law</i><p hidden>Columbia Journal of Transnational Law Col J Trans L <i>Col. J. Trans. L.</i></p></td><td><i>Col. J. Trans. L.</i></td></tr>
+<tr><td>Comité contre la torture<p hidden>Comite contre la torture Com c tort Com. c. tort.</p></td><td>Com. c. tort.</td></tr>
+<tr><td>Comité des droits de l'enfant<p hidden>Comite des droits de l'enfant Com dr enf Com. dr. enf.</p></td><td>Com. dr. enf.</td></tr>
+<tr><td>Comité des droits de l'homme<p hidden>Comite des droits de l'homme Com DH Com. D.H.</p></td><td>Com. D.H.</td></tr>
+<tr><td>Comité des droits des personnes handicapées<p hidden>Comite des droits des personnes handicapees CRPD CRPD</p></td><td>CRPD</td></tr>
+<tr><td><i>Comité d'études et de législation / Verslagen van het Comité voor Studie en Wetgeving</i><p hidden>Comite d'etudes et de legislation Verslagen van het Comite voor Studie en Wetgeving CEL / CSW <i>CEL/CSW</i></p></td><td><i>CEL/CSW</i></td></tr>
+<tr><td>Comité européen pour la prévention de la torture<p hidden>Comite europeen pour la prevention de la torture Com prev tort Com. prév. tort.</p></td><td>Com. prév. tort.</td></tr>
+<tr><td>Comité pour l'élimination de la discrimination a l'égard des femmes<p hidden>Comite pour l elimination de la discrimination a l egard des femmes CEDAW CEDAW</p></td><td>CEDAW</td></tr>
+<tr><td><i>Commentaire systématique du Code des sociétés</i><p hidden>Commentaire systematique du Code des societes Commentaire systematique du Code des societes <i>Commentaire systématique du Code des sociétés</i></p></td><td><i>Commentaire systématique du Code des sociétés</i></td></tr>
+<tr><td>Commission communautaire commune<p hidden>Commission communautaire commune CCC C.C.C.</p></td><td>C.C.C.</td></tr>
+<tr><td>Commission communautaire flamande<p hidden>Commission communautaire flamande CC fl C.C. fl.</p></td><td>C.C. fl.</td></tr>
+<tr><td>Commission communautaire francaise<p hidden>Commission communautaire francaise CC fr C.C. fr.</p></td><td>C.C. fr.</td></tr>
+<tr><td>Commission européenne<p hidden>Commission europeenne Comm eur Comm. eur.</p></td><td>Comm. eur.</td></tr>
+<tr><td>Commission européenne des droits de l'homme<p hidden>Commission europeenne des droits de l'homme Comm eur DH Comm. eur. D.H.</p></td><td>Comm. eur. D.H.</td></tr>
+<tr><td><i>Common Market Law Review</i><p hidden>Common Market Law Review Com MLR <i>Com. M.L.R.</i></p></td><td><i>Com. M.L.R.</i></td></tr>
+<tr><td>Communauté économique européenne<p hidden>Communaute economique europeenne CEE C.E.E.</p></td><td>C.E.E.</td></tr>
+<tr><td>Communauté européenne de l'énergie atomique<p hidden>Communaute europeenne de l'energie atomique CEEA C.E.E.A.</p></td><td>C.E.E.A.</td></tr>
+<tr><td>Communauté européenne du charbon et de l'acier<p hidden>Communaute europeenne du charbon et de l'acier CECA C.E.C.A.</p></td><td>C.E.C.A.</td></tr>
+<tr><td>Communauté flamande<p hidden>Communaute flamande Comm fl Comm. fl.</p></td><td>Comm. fl.</td></tr>
+<tr><td>Communauté francaise<p hidden>Communaute francaise Comm fr Comm. fr.</p></td><td>Comm. fr.</td></tr>
+<tr><td>Communauté germanophone<p hidden>Communaute germanophone Comm germ Comm. germ.</p></td><td>Comm. germ.</td></tr>
+<tr><td>Compagnie<p hidden>Compagnie Co Co.</p></td><td>Co.</td></tr>
+<tr><td>Comparez<p hidden>Comparez compar compar.</p></td><td>compar.</td></tr>
+<tr><td><i>Compendium social. Droit du travail</i><p hidden>Compendium social Droit du travail Compendium social Droit du travail <i>Compendium social. Droit du travail</i></p></td><td><i>Compendium social. Droit du travail</i></td></tr>
+<tr><td><i>Competitio</i><p hidden>Competitio Competitio <i>Competitio</i></p></td><td><i>Competitio</i></td></tr>
+<tr><td>Complément<p hidden>Complement compl compl.</p></td><td>compl.</td></tr>
+<tr><td><i>Comptabilité et fiscalité pratiques</i><p hidden>Comptabilite et fiscalite pratiques C & FP <i>C. & F.P.</i></p></td><td><i>C. & F.P.</i></td></tr>
+<tr><td><i>Compte rendu</i><p hidden>Compte rendu CR <i>C.R.</i></p></td><td><i>C.R.</i></td></tr>
+<tr><td><i>Compte rendu analytique</i><p hidden>Compte rendu analytique CRA <i>C.R.A.</i></p></td><td><i>C.R.A.</i></td></tr>
+<tr><td><i>Compte rendu intégral</i><p hidden>Compte rendu integral CRI <i>C.R.I.</i></p></td><td><i>C.R.I.</i></td></tr>
+<tr><td><i>Computerrecht</i><p hidden>Computerrecht Computerr <i>Computerr.</i></p></td><td><i>Computerr.</i></td></tr>
+<tr><td>Conclusions<p hidden>Conclusions concl concl.</p></td><td>concl.</td></tr>
+<tr><td>Confer (rapprochez-comparez)<p hidden>Confer cf cfr <i>cf. <br> cfr</i></p></td><td><i>cf. <br> cfr</i></td></tr>
+<tr><td>Conformes (ou confirmant)<p hidden>Conformes confirmant conf conf.</p></td><td>conf.</td></tr>
+<tr><td>Conseil constitutionnel de France<p hidden>Conseil constitutionnel de France Cons const fr Cons. const. fr.</p></td><td>Cons. const. fr.</td></tr>
+<tr><td>Conseil de guerre<p hidden>Conseil de guerre Cons guerre Cons. guerre</p></td><td>Cons. guerre</td></tr>
+<tr><td><i>Conseil de la concurrence. Revue trimestrielle de jurisprudence</i><p hidden>Conseil de la concurrence Revue trimestrielle de jurisprudence C conc Jur <i>C. conc. Jur.</i></p></td><td><i>C. conc. Jur.</i></td></tr>
+<tr><td>Conseil de prud'hommes<p hidden>Conseil de prud'hommes CP C.P.</p></td><td>C.P.</td></tr>
+<tr><td>Conseil de prud'hommes d'appel<p hidden>Conseil de prud'hommes d'appel CP App C.P. App.</p></td><td>C.P. App.</td></tr>
+<tr><td>Conseil d'État<p hidden>Conseil d'etat CE C.E.</p></td><td>C.E.</td></tr>
+<tr><td>Conseil d'État de France<p hidden>Conseil d'etat de France CE fr C.E. fr.</p></td><td>C.E. fr.</td></tr>
+<tr><td>Conseil du contentieux des étrangers<p hidden>Conseil du contentieux des etrangers Cons cont etr CCE Cons. cont. étr. <br> C.C.E.</p></td><td>Cons. cont. étr. <br> C.C.E.</td></tr>
+<tr><td>Conseiller<p hidden>Conseiller Cons Cons.</p></td><td>Cons.</td></tr>
+<tr><td>Consorts<p hidden>Consorts crts crts</p></td><td>crts</td></tr>
+<tr><td>Constitution<p hidden>Constitution Const Const.</p></td><td>Const.</td></tr>
+<tr><td>Constitution coordonnée<p hidden>Constitution coordonnee Const coord Const. coord.</p></td><td>Const. coord.</td></tr>
+<tr><td>Consultez<p hidden>Consultez cons cons.</p></td><td>cons.</td></tr>
+<tr><td><i>Consumentenrecht</i><p hidden>Consumentenrecht DCCR <i>D.C.C.R.</i></p></td><td><i>D.C.C.R.</i></td></tr>
+<tr><td>Contraire (en sens -)<p hidden>en sens Contraire  contra <i>contra</i></p></td><td><i>contra</i></td></tr>
+<tr><td>Contre<p hidden>Contre c c.</p></td><td>c.</td></tr>
+<tr><td>Convention<p hidden>Convention Conv Conv.</p></td><td>Conv.</td></tr>
+<tr><td>Convention collective de travail<p hidden>Convention collective de travail CCT C.C.T.</p></td><td>C.C.T.</td></tr>
+<tr><td>Convention européenne des droits de l'homme<p hidden>Convention europeenne des droits de l'homme CEDH CEDH CEDH <br> C.E.D.H.</p></td><td>CEDH <br> C.E.D.H.</td></tr>
+<tr><td>Cour africaine des droits de l'homme et des peuples<p hidden>Cour africaine des droits de l'homme et des peuples Cour afr DHP Cour afr. D.H.P.</p></td><td>Cour afr. D.H.P.</td></tr>
+<tr><td>Cour constitutionnelle<p hidden>Cour constitutionnelle CC C Const C.C. <br> C. Const.</p></td><td>C.C. <br> C. Const.</td></tr>
+<tr><td>Cour d'appel de Bruxelles (Anvers, Gand, Liège, Mons)<p hidden>Cour d'appel de Bruxelles Anvers, Gand, Liege, Mons Bruxelles Anvers, Gand, Liege, Mons Bruxelles (Anvers, Gand, Liège, Mons)</p></td><td>Bruxelles (Anvers, Gand, Liège, Mons)</td></tr>
+<tr><td>Cour d'appel de Paris<p hidden>Cour d'appel de Paris Paris Paris</p></td><td>Paris</td></tr>
+<tr><td>Cour d'arbitrage<p hidden>Cour d'arbitrage CA C.A.</p></td><td>C.A.</td></tr>
+<tr><td>Cour d'assises<p hidden>Cour d'assises Cour ass Cour ass.</p></td><td>Cour ass.</td></tr>
+<tr><td>Cour de cassation<p hidden>Cour de cassation Cass Cass.</p></td><td>Cass.</td></tr>
+<tr><td>Cour de cassation de France<p hidden>Cour de cassation de France Cass fr Cass. fr.</p></td><td>Cass. fr.</td></tr>
+<tr><td>Cour de cassation de France, chambre commerciale et financière<p hidden>Cour de cassation de France, chambre commerciale et financiere Cass fr com Cass. fr. (com.)</p></td><td>Cass. fr. (com.)</td></tr>
+<tr><td>Cour de cassation de France, chambre criminelle<p hidden>Cour de cassation de France, chambre criminelle Cass fr crim Cass. fr. (crim.)</p></td><td>Cass. fr. (crim.)</td></tr>
+<tr><td>Cour de cassation de France, chambre sociale<p hidden>Cour de cassation de France, chambre sociale Cass fr soc Cass. fr. (soc.)</p></td><td>Cass. fr. (soc.)</td></tr>
+<tr><td>Cour de cassation de France, première chambre civile<p hidden>Cour de cassation de France, premiere chambre civile Cass fr 1re  civ Cass. fr. (1re  civ.)</p></td><td>Cass. fr. (1re  civ.)</td></tr>
+<tr><td>Cour de justice Benelux<p hidden>Cour de justice Benelux CJ Benelux C.J. Benelux</p></td><td>C.J. Benelux</td></tr>
+<tr><td>Cour de justice de l'Union européenne<p hidden>Cour de justice de l'Union europeenne CJUE C.J.U.E.</p></td><td>C.J.U.E.</td></tr>
+<tr><td>Cour de justice des Communautés européennes<p hidden>Cour de justice des Communautes europeennes CJCE C.J.C.E.</p></td><td>C.J.C.E.</td></tr>
+<tr><td>Cour des comptes<p hidden>Cour des comptes C comptes C. comptes</p></td><td>C. comptes</td></tr>
+<tr><td>Cour du travail<p hidden>Cour du travail C trav C. trav.</p></td><td>C. trav.</td></tr>
+<tr><td>Cour européenne des droits de l'homme<p hidden>Cour europeenne des droits de l'homme Cour eur DH Cour eur dr h Cour eur. D.H. <br>Cour eur. dr. h.</p></td><td>Cour eur. D.H. <br>Cour eur. dr. h.</td></tr>
+<tr><td>Cour interaméricaine des droits de l'homme<p hidden>Cour interamericaine des droits de l'homme Cour interam DH Cour interam. D.H.</p></td><td>Cour interam. D.H.</td></tr>
+<tr><td>Cour internationale de justice<p hidden>Cour internationale de justice CIJ C.I.J.</p></td><td>C.I.J.</td></tr>
+<tr><td>Cour militaire<p hidden>Cour militaire Cour mil Cour mil.</p></td><td>Cour mil.</td></tr>
+<tr><td>Cour pénale internationale<p hidden>Cour penale internationale CPI C.P.I.</p></td><td>C.P.I.</td></tr>
+<tr><td><i>Courrier de l'immobilier</i><p hidden>Courrier de l'immobilier Cour immo <i>Cour. immo.</i></p></td><td><i>Cour. immo.</i></td></tr>
+<tr><td><i>Courrier hebdomadaire du Centre de recherche et d'information socio-politiques</i><p hidden>Courrier hebdomadaire du Centre de recherche et d'information socio-politiques CH CRISP <i>C.H. CRISP</i></p></td><td><i>C.H. CRISP</i></td></tr>
+<tr><td><i>Création, information, communication</i><p hidden>Creation, information, communication CIC <i>C.I.C.</i></p></td><td><i>C.I.C.</i></td></tr>
+<tr><td><i>Current Legal Theory</i><p hidden>Current Legal Theory CULT <i>CULT</i></p></td><td><i>CULT</i></td></tr>
+<tr><td><i>Custodes</i><p hidden>Custodes Custodes <i>Custodes</i></p></td><td><i>Custodes</i></td></tr>
+<tr><td><i>De Advocaat</i><p hidden>Advocaat De  De Advoc <i>De Advoc.</i></p></td><td><i>De Advoc.</i></td></tr>
+<tr><td><i>De Belgische accountant</i><p hidden>Belgische accountant De  De Belg Acc <i>De Belg. Acc.</i></p></td><td><i>De Belg. Acc.</i></td></tr>
+<tr><td><i>De Juristenkrant</i><p hidden>Juristenkrant De  Juristenkrant <i>Juristenkrant</i></p></td><td><i>Juristenkrant</i></td></tr>
+<tr><td><i>De Sociale maand</i><p hidden>De Sociale maand Soc Maand <i>Soc. Maand</i></p></td><td><i>Soc. Maand</i></td></tr>
+<tr><td><i>De Verzekering</i><p hidden>Verzekering De  De Verz <i>De Verz.</i></p></td><td><i>De Verz.</i></td></tr>
+<tr><td><i>De Verzekeringswereld</i><p hidden>Verzekeringswereld De  Verz W <i>Verz. W.</i></p></td><td><i>Verz. W.</i></td></tr>
+<tr><td>Décision<p hidden>Decision Dec Déc.</p></td><td>Déc.</td></tr>
+<tr><td>Déclaration<p hidden>Declaration Decl Décl.</p></td><td>Décl.</td></tr>
+<tr><td>Déclaration universelle des droits de l'homme<p hidden>Declaration universelle des droits de l'homme DUDH D.U.D.H.</p></td><td>D.U.D.H.</td></tr>
+<tr><td>Décret<p hidden>Decret Decr Décr.</p></td><td>Décr.</td></tr>
+<tr><td>Décret de l'Assemblée de la Commission communautaire francaise<p hidden>Decret de l'Assemblee de la Commission communautaire francaise Decr CC fr Décr. C.C. fr.</p></td><td>Décr. C.C. fr.</td></tr>
+<tr><td>Décret du Parlement de la Communauté francaise<p hidden>Decret du Parlement de la Communaute francaise Decr Comm fr Décr. Comm. fr.</p></td><td>Décr. Comm. fr.</td></tr>
+<tr><td>Décret du Parlement de la Communauté germanophone<p hidden>Decret du Parlement de la Communaute germanophone Decr Comm germ Décr. Comm. germ.</p></td><td>Décr. Comm. germ.</td></tr>
+<tr><td>Décret du Parlement flamand<p hidden>Decret du Parlement flamand Decr fl Décr. fl.</p></td><td>Décr. fl.</td></tr>
+<tr><td>Décret du Parlement wallon<p hidden>Decret du Parlement wallon Decr Reg w Décr. Rég. w.</p></td><td>Décr. Rég. w.</td></tr>
+<tr><td>Décret spécial<p hidden>Decret special Decr spec Décr. spéc.</p></td><td>Décr. spéc.</td></tr>
+<tr><td>Directive<p hidden>Directive Dir Dir.</p></td><td>Dir.</td></tr>
+<tr><td>Dissertation<p hidden>Dissertation diss diss.</p></td><td>diss.</td></tr>
+<tr><td>division (d'un arrondissement judiciaire)<p hidden>Div division d'un arrondissement judiciaire div.</p></td><td>div.</td></tr>
+<tr><td><i>Divorce – Commentaire pratique</i><p hidden>Divorce  Commentaire pratique Divorce  Commentaire pratique <i>Divorce – Commentaire pratique</i></p></td><td><i>Divorce – Commentaire pratique</i></td></tr>
+<tr><td><i>Divorce. Actualité juridique, sociale et fiscale</i><p hidden>Divorce Actualite juridique, sociale et fiscale Div Act <i>Div. Act.</i></p></td><td><i>Div. Act.</i></td></tr>
+<tr><td>Doctrine<p hidden>Doctrine doctr doctr.</p></td><td>doctr.</td></tr>
+<tr><td>Document<p hidden>Document doc doc.</p></td><td>doc.</td></tr>
+<tr><td><i>Documents</i><p hidden>Documents Doc <i>Doc.</i></p></td><td><i>Doc.</i></td></tr>
+<tr><td><i>Documents CEPESS</i><p hidden>Documents CEPESS Doc Cepess <i>Doc. Cepess</i></p></td><td><i>Doc. Cepess</i></td></tr>
+<tr><td><i>Documents parlementaires</i><p hidden>Documents parlementaires Doc parl <i>Doc. parl.</i></p></td><td><i>Doc. parl.</i></td></tr>
+<tr><td><i>Dokumente</i><p hidden>Dokumente Dok <i>Dok.</i></p></td><td><i>Dok.</i></td></tr>
+<tr><td><i>Droit bancaire et financier</i><p hidden>Droit bancaire et financier Dr banc fin DBF <i>Dr. banc. fin. <br> D.B.F.</i></p></td><td><i>Dr. banc. fin. <br> D.B.F.</i></td></tr>
+<tr><td><i>Droit de la circulation – Jurisprudence</i><p hidden>Droit de la circulation  Jurisprudence Dr circ <i>Dr. circ.</i></p></td><td><i>Dr. circ.</i></td></tr>
+<tr><td><i>Droit de la consommation — Consumenten Recht</i><p hidden>Droit de la consommation  Consumenten Recht DCCR  DCCR <i>DCCR <br> D.C.C.R.</i></p></td><td><i>DCCR <br> D.C.C.R.</i></td></tr>
+<tr><td><i>Droit de l'informatique</i><p hidden>Droit de l'informatique Dr inform <i>Dr. inform.</i></p></td><td><i>Dr. inform.</i></td></tr>
+<tr><td><i>Droit de l'informatique et des télécoms</i><p hidden>Droit de l'informatique et des telecoms DIT <i>D.I.T.</i></p></td><td><i>D.I.T.</i></td></tr>
+<tr><td><i>Droit des sociétés</i><p hidden>Droit des societes Dr societes <i>Dr. sociétés</i></p></td><td><i>Dr. sociétés</i></td></tr>
+<tr><td><i>Droit des sociétés commerciales</i><p hidden>Droit des societes commerciales DSC <i>D.S.C.</i></p></td><td><i>D.S.C.</i></td></tr>
+<tr><td><i>Droit en plus</i><p hidden>Droit en plus Dr plus <i>Dr. plus</i></p></td><td><i>Dr. plus</i></td></tr>
+<tr><td><i>Droit en Quart Monde</i><p hidden>Droit en Quart Monde DQM <br> Dr QM <i>D.Q.M. <br> Dr. Q.M.</i></p></td><td><i>D.Q.M. <br> Dr. Q.M.</i></td></tr>
+<tr><td><i>Droit et pratique du commerce international</i><p hidden>Droit et pratique du commerce international Dr Prat Com Int <i>Dr. Prat. Com. Int.</i></p></td><td><i>Dr. Prat. Com. Int.</i></td></tr>
+<tr><td><i>Droit et société</i><p hidden>Droit et societe D & S <i>D & S</i></p></td><td><i>D & S</i></td></tr>
+<tr><td><i>Droit et Ville</i><p hidden>Droit et Ville Dr et Ville <i>Dr. et Ville</i></p></td><td><i>Dr. et Ville</i></td></tr>
+<tr><td><i>Droit européen des transports</i><p hidden>Droit europeen des transports Dr europ transp <i>Dr. europ. transp.</i></p></td><td><i>Dr. europ. transp.</i></td></tr>
+<tr><td><i>Droit fiscal</i><p hidden>Droit fiscal Dr fisc <i>Dr. fisc.</i></p></td><td><i>Dr. fisc.</i></td></tr>
+<tr><td>Droit international privé<p hidden>Droit international prive DIP D.I.P.</p></td><td>D.I.P.</td></tr>
+<tr><td><i>Droit maritime francais</i><p hidden>Droit maritime francais Dr marit franc <i>Dr. marit. franc.</i></p></td><td><i>Dr. marit. franc.</i></td></tr>
+<tr><td><i>Droit pénal de l'entreprise</i><p hidden>Droit penal de l'entreprise Dr pen entr <i>Dr. pén. entr.</i></p></td><td><i>Dr. pén. entr.</i></td></tr>
+<tr><td><i>Droit pénal et procédure pénale</i><p hidden>Droit penal et procedure penale Droit penal et procedure penale <i>Droit pénal et procédure pénale</i></p></td><td><i>Droit pénal et procédure pénale</i></td></tr>
+<tr><td><i>Droit social</i><p hidden>Droit social Dr soc <i>Dr. soc.</i></p></td><td><i>Dr. soc.</i></td></tr>
+<tr><td><i>Droits fondamentaux</i><p hidden>Droits fondamentaux Dr fond <i>Dr. fond.</i></p></td><td><i>Dr. fond.</i></td></tr>
+<tr><td><i>Droits intellectuels</i><p hidden>Droits intellectuels IRDI <i>I.R.D.I.</i></p></td><td><i>I.R.D.I.</i></td></tr>
+<tr><td><i>EC Tax Review</i><p hidden>EC Tax Review EC Tax <i>EC Tax</i></p></td><td><i>EC Tax</i></td></tr>
+<tr><td><i>Echtscheidingsjournaal</i><p hidden>Echtscheidingsjournaal EJ <i>E.J.</i></p></td><td><i>E.J.</i></td></tr>
+<tr><td><i>Écologie et Politique</i><p hidden>ecologie et Politique ecol Pol <i>Écol. Pol.</i></p></td><td><i>Écol. Pol.</i></td></tr>
+<tr><td><i>Ecology Law Quarterly</i><p hidden>Ecology Law Quarterly ELQuart <i>E.L.Quart</i></p></td><td><i>E.L.Quart</i></td></tr>
+<tr><td><i>Economisch en sociaal tijdschrift</i><p hidden>Economisch en sociaal tijdschrift EST <i>E.S.T.</i></p></td><td><i>E.S.T.</i></td></tr>
+<tr><td>Édition (ou éditeur)<p hidden>edition editeur ed Ed. E. Éd.</p></td><td>éd. (ou E.)</td></tr>
+<tr><td><i>Eigenaars magazine</i><p hidden>Eigenaars magazine Eig Mag <i>Eig. Mag.</i></p></td><td><i>Eig. Mag.</i></td></tr>
+<tr><td>En préparation<p hidden>En preparation EP E.P.</p></td><td>E.P.</td></tr>
+<tr><td>En sens contraire<p hidden>En sens contraire contra <i>contra</i></p></td><td><i>contra</i></td></tr>
+<tr><td><i>Engager, Occuper, Licencier</i><p hidden>Engager, Occuper, Licencier EOL <i>EOL</i></p></td><td><i>EOL</i></td></tr>
+<tr><td>Entrée en vigueur<p hidden>Entree en vigueur vig vig.</p></td><td>vig.</td></tr>
+<tr><td><i>Enviro Droit</i><p hidden>Enviro Droit Enviro <i>Enviro</i></p></td><td><i>Enviro</i></td></tr>
+<tr><td><i>Erratum</i><p hidden>Erratum err errat err. errat.</p></td><td><i>err.</i> ou <i>errat.</i></td></tr>
+<tr><td>Espace économique européen<p hidden>Espace economique europeen EEE E.E.E.</p></td><td>E.E.E.</td></tr>
+<tr><td><i>Et alii</i><p hidden>Et alii et al <i>et al.</i></p></td><td><i>et al.</i></td></tr>
+<tr><td>Et autres (ou entre autres)<p hidden>Et autres ou entre autres ea e.a.</p></td><td>e.a.</td></tr>
+<tr><td>Et consorts<p hidden>Et consorts et crts et crts</p></td><td>et crts</td></tr>
+<tr><td><i>Et sequentes</i><p hidden>Et sequentes et seq <i>et seq.</i></p></td><td><i>et seq.</i></td></tr>
+<tr><td>Et suivant(e)s<p hidden>Et suivants et suivantes et s et sv et s. et sv.</p></td><td>et s. ou et sv.</td></tr>
+<tr><td>Et sur renv.<p hidden>Et sur renv et sur renvoi et sur renvoi</p></td><td>et sur renvoi</td></tr>
+<tr><td><i>Ethiek & Maatschappij</i><p hidden>Ethiek & Maatschappij Et & Maatsch <i>Et. & Maatsch.</i></p></td><td><i>Et. & Maatsch.</i></td></tr>
+<tr><td><i>Ethiek en recht in de gezondheidszorg</i><p hidden>Ethiek en recht in de gezondheidszorg Ethiek & Recht <i>Ethiek & Recht</i></p></td><td><i>Ethiek & Recht</i></td></tr>
+<tr><td><i>Euredia</i><p hidden>Euredia Euredia <i>Euredia</i></p></td><td><i>Euredia</i></td></tr>
+<tr><td><i>European Constitutional Law Review</i><p hidden>European Constitutional Law Review ECLR <i>E.C.L.R.</i></p></td><td><i>E.C.L.R.</i></td></tr>
+<tr><td><i>European Human Rights Law Review</i><p hidden>European Human Rights Law Review EHRLR <i>E.H.R.L.R.</i></p></td><td><i>E.H.R.L.R.</i></td></tr>
+<tr><td><i>European Intellectual Property Review</i><p hidden>European Intellectual Property Review EIPR <i>E.I.P.R.</i></p></td><td><i>E.I.P.R.</i></td></tr>
+<tr><td><i>European Journal of Crime, Criminal Law & Criminal Justice</i><p hidden>European Journal of Crime, Criminal Law & Criminal Justice Eur J crime Cr L Cr J <i>Eur. J. crime Cr. L. Cr. J.</i></p></td><td><i>Eur. J. crime Cr. L. Cr. J.</i></td></tr>
+<tr><td><i>European Journal of International Law</i><p hidden>European Journal of International Law EJIL <i>E.J.I.L.</i></p></td><td><i>E.J.I.L.</i></td></tr>
+<tr><td><i>European Journal of Migration and Law</i><p hidden>European Journal of Migration and Law EJML <i>E.J.M.L.</i></p></td><td><i>E.J.M.L.</i></td></tr>
+<tr><td><i>European Law Journal</i><p hidden>European Law Journal ELJ <i>E.L.J.</i></p></td><td><i>E.L.J.</i></td></tr>
+<tr><td><i>European Law Review</i><p hidden>European Law Review ELRev <i>E.L.Rev.</i></p></td><td><i>E.L.Rev.</i></td></tr>
+<tr><td><i>European Review of Private Law</i><p hidden>European Review of Private Law ERPL <i>E.R.P.L.</i></p></td><td><i>E.R.P.L.</i></td></tr>
+<tr><td><i>European transport law</i><p hidden>European transport law ETL <i>E.T.L.</i></p></td><td><i>E.T.L.</i></td></tr>
+<tr><td><i>European University News</i><p hidden>European University News EUN <i>EUN</i></p></td><td><i>EUN</i></td></tr>
+<tr><td><i>Evaluation du préjudice corporel</i><p hidden>Evaluation du prejudice corporel EPC <i>E.P.C.</i></p></td><td><i>E.P.C.</i></td></tr>
+<tr><td><i>Excerpeta Criminologica</i><p hidden>Excerpeta Criminologica Ex Crim <i>Ex. Crim.</i></p></td><td><i>Ex. Crim.</i></td></tr>
+<tr><td>Exemple<p hidden>Exemple ex ex.</p></td><td>ex.</td></tr>
+<tr><td>Fascicule<p hidden>Fascicule fasc fasc.</p></td><td>fasc.</td></tr>
+<tr><td><i>Fatik – Tijdschrift voor strafbeleid en gevangeniswezen</i><p hidden>Fatik  Tijdschrift voor strafbeleid en gevangeniswezen Fatik <i>Fatik</i></p></td><td><i>Fatik</i></td></tr>
+<tr><td><i>Fiduciaire berichten</i><p hidden>Fiduciaire berichten Fid Ber <i>Fid. Ber.</i></p></td><td><i>Fid. Ber.</i></td></tr>
+<tr><td><i>Fisca</i><p hidden>Fisca Fisca <i>Fisca</i></p></td><td><i>Fisca</i></td></tr>
+<tr><td><i>Fiscale actualiteit</i><p hidden>Fiscale actualiteit Fisc Act <i>Fisc. Act.</i></p></td><td><i>Fisc. Act.</i></td></tr>
+<tr><td><i>Fiscalité de l'assurance</i><p hidden>Fiscalite de l'assurance Fisc Ass <i>Fisc. Ass.</i></p></td><td><i>Fisc. Ass.</i></td></tr>
+<tr><td><i>Fiscologue</i><p hidden>Fiscologue Fiscologue <i>Fiscologue</i></p></td><td><i>Fiscologue</i></td></tr>
+<tr><td><i>Fiscologue international</i><p hidden>Fiscologue international Fiscologue I <i>Fiscologue (I.)</i></p></td><td><i>Fiscologue (I.)</i></td></tr>
+<tr><td><i>Fiscoloog</i><p hidden>Fiscoloog Fiscoloog <i>Fiscoloog</i></p></td><td><i>Fiscoloog</i></td></tr>
+<tr><td><i>Fiscoloog internationaal</i><p hidden>Fiscoloog internationaal Fiscoloog I <i>Fiscoloog (I.)</i></p></td><td><i>Fiscoloog (I.)</i></td></tr>
+<tr><td>Fonds monétaire international<p hidden>Fonds monetaire international FMI FMI</p></td><td>FMI</td></tr>
+<tr><td><i>Fragen und Antworten</i><p hidden>Fragen und Antworten Frag Ant <i>Frag. Ant.</i></p></td><td><i>Frag. Ant.</i></td></tr>
+<tr><td>Francais(e)<p hidden>Francaise français fr fr.</p></td><td>fr.</td></tr>
+<tr><td><i>Gazette du Palais</i><p hidden>Gazette du Palais Gaz Pal <i>Gaz. Pal.</i></p></td><td><i>Gaz. Pal.</i></td></tr>
+<tr><td>Gouvernement de la Communauté flamande<p hidden>Gouvernement de la Communaute flamande Gouv Comm fl Gouv. Comm. fl.</p></td><td>Gouv. Comm. fl.</td></tr>
+<tr><td>Gouvernement de la Communauté francaise<p hidden>Gouvernement de la Communaute francaise Gouv Comm fr Gouv. Comm. fr.</p></td><td>Gouv. Comm. fr.</td></tr>
+<tr><td>Gouvernement de la Communauté germanophone<p hidden>Gouvernement de la Communaute germanophone Gouv Comm germ Gouv. Comm. germ.</p></td><td>Gouv. Comm. germ.</td></tr>
+<tr><td>Gouvernement de la Région de Bruxelles-Capitale<p hidden>Gouvernement de la Region de Bruxelles-Capitale Gouv Reg BruxCap Gouv. Rég. Brux.-Cap.</p></td><td>Gouv. Rég. Brux.-Cap.</td></tr>
+<tr><td>Gouvernement de la Région wallonne<p hidden>Gouvernement de la Region wallonne Gouv Reg w Gouv. Rég. w.</p></td><td>Gouv. Rég. w.</td></tr>
+<tr><td><i>Guide de droit immobilier</i><p hidden>Guide de droit immobilier Guide de droit immobilier <i>Guide de droit immobilier</i></p></td><td><i>Guide de droit immobilier</i></td></tr>
+<tr><td><i>Guide juridique de l'entreprise</i><p hidden>Guide juridique de l'entreprise GUJE <i>G.U.J.E.</i></p></td><td><i>G.U.J.E.</i></td></tr>
+<tr><td><i>Handelingen</i><p hidden>Handelingen Hand <i>Hand.</i></p></td><td><i>Hand.</i></td></tr>
+<tr><td><i>Handelspraktijk & Mededinging. Jaarboek.</i><p hidden>Handelspraktijk & Mededinging Jaarboek Handelspr & Med Jaarb <i>Handelspr. & Med. Jaarb.</i></p></td><td><i>Handelspr. & Med. Jaarb.</i></td></tr>
+<tr><td><i>Handelspraktijken</i><p hidden>Handelspraktijken Handelspr <i>Handelspr.</i></p></td><td><i>Handelspr.</i></td></tr>
+<tr><td><i>Handelsrecht. Snelberichten</i><p hidden>Handelsrecht Snelberichten HS <i>H.S.</i></p></td><td><i>H.S.</i></td></tr>
+<tr><td><i>Harvard Human Rights Journal</i><p hidden>Harvard Human Rights Journal Harv HRJ <i>Harv. H.R.J.</i></p></td><td><i>Harv. H.R.J.</i></td></tr>
+<tr><td><i>Harvard International Law Journal</i><p hidden>Harvard International Law Journal HILJ <i>H.I.L.J.</i></p></td><td><i>H.I.L.J.</i></td></tr>
+<tr><td><i>Het Fiscaal Weekoverzicht</i><p hidden>Het Fiscaal Weekoverzicht Fisc Week <i>Fisc. Week.</i></p></td><td><i>Fisc. Week.</i></td></tr>
+<tr><td>Heure<p hidden>Heure h h.</p></td><td>h.</td></tr>
+<tr><td><i>Human Rights and International legal Discourse</i><p hidden>Human Rights and International legal Discourse HRILD <i>H.R.I.L.D.</i></p></td><td><i>H.R.I.L.D.</i></td></tr>
+<tr><td><i>Human Rights Law Review</i><p hidden>Human Rights Law Review HRLR <i>H.R.L.R.</i></p></td><td><i>H.R.L.R.</i></td></tr>
+<tr><td><i>Human Rights Quarterly</i><p hidden>Human Rights Quarterly HRQ <i>H.R.Q.</i></p></td><td><i>H.R.Q.</i></td></tr>
+<tr><td><i>Huur. Het huurrecht in de praktijk</i><p hidden>Huur Het huurrecht in de praktijk Huur <i>Huur</i></p></td><td><i>Huur</i></td></tr>
+<tr><td><i>Huurdersblad</i><p hidden>Huurdersblad Huurbl <i>Huurbl.</i></p></td><td><i>Huurbl.</i></td></tr>
+<tr><td><i>Huurrecht</i><p hidden>Huurrecht Huurrecht <i>Huurrecht</i></p></td><td><i>Huurrecht</i></td></tr>
+<tr><td><i>Ibidem (au même endroit)</i><p hidden>Ibidem ibid <i>ibid.</i></p></td><td><i>ibid.</i></td></tr>
+<tr><td><i>Id est</i> (c'est-a-dire)<p hidden>Id est ie <i>i.e.</i></p></td><td><i>i.e.</i></td></tr>
+<tr><td><i>In foro</i><p hidden>In foro In foro <i>In foro</i></p></td><td><i>In foro</i></td></tr>
+<tr><td><i>Indicateur social</i><p hidden>Indicateur social Indic soc <i>Indic. soc.</i></p></td><td><i>Indic. soc.</i></td></tr>
+<tr><td>Inédit<p hidden>Inedit ined inéd.</p></td><td>inéd.</td></tr>
+<tr><td><i>Info-jura</i><p hidden>Info-jura Info Jura <i>Info Jura</i></p></td><td><i>Info Jura</i></td></tr>
+<tr><td><i>Inforevue</i><p hidden>Inforevue Inforevue <i>Inforevue</i></p></td><td><i>Inforevue</i></td></tr>
+<tr><td><i>Informatieblad R.I.Z.I.V.</i><p hidden>Informatieblad RIZIV Inf RIZIV <i>Inf. R.I.Z.I.V.</i></p></td><td><i>Inf. R.I.Z.I.V.</i></td></tr>
+<tr><td><i>Informatierecht</i><p hidden>Informatierecht Info Recht <i>Info Recht</i></p></td><td><i>Info Recht</i></td></tr>
+<tr><td><i>Informations rapides. Droit commercial</i><p hidden>Informations rapides Droit commercial IRDC <i>I.R.D.C.</i></p></td><td><i>I.R.D.C.</i></td></tr>
+<tr><td><i>Informations sociales</i><p hidden>Informations sociales Inf soc <i>Inf. soc.</i></p></td><td><i>Inf. soc.</i></td></tr>
+<tr><td><i>Institut des réviseurs d'entreprises. Bulletin d'information</i><p hidden>Institut des reviseurs d'entreprises Bulletin d'information Bull inf IRE <i>Bull. inf. I.R.E.</i></p></td><td><i>Bull. inf. I.R.E.</i></td></tr>
+<tr><td><i>Intellectuele Eigendom en Reclamerecht</i><p hidden>Intellectuele Eigendom en Reclamerecht IER <i>I.E.R.</i></p></td><td><i>I.E.R.</i></td></tr>
+<tr><td><i>Intellectuele rechten / Droit Intellectuel</i><p hidden>Intellectuele rechten  Droit Intellectuel IRDI <i>I.R.D.I.</i></p></td><td><i>I.R.D.I.</i></td></tr>
+<tr><td><i>International and Comparative Law Quarterly</i><p hidden>International and Comparative Law Quarterly ICLQ <i>I.C.L.Q.</i></p></td><td><i>I.C.L.Q.</i></td></tr>
+<tr><td><i>International Human Rights Reports</i><p hidden>International Human Rights Reports IHRR <i>I.H.R.R.</i></p></td><td><i>I.H.R.R.</i></td></tr>
+<tr><td><i>International Journal of Constitutional Law</i><p hidden>International Journal of Constitutional Law IJ Const L <i>I.J. Const. L.</i></p></td><td><i>I.J. Const. L.</i></td></tr>
+<tr><td><i>International Journal of Human Rights</i><p hidden>International Journal of Human Rights IJHR <i>I.J.H.R.</i></p></td><td><i>I.J.H.R.</i></td></tr>
+<tr><td><i>International Review of Contemporary Law</i><p hidden>International Review of Contemporary Law IRCL <i>I.R.C.L.</i></p></td><td><i>I.R.C.L.</i></td></tr>
+<tr><td><i>International Review of Penal Law</i><p hidden>International Review of Penal Law Int Rev Pen Law <i>Int. Rev. Pen. Law</i></p></td><td><i>Int. Rev. Pen. Law</i></td></tr>
+<tr><td><i>International Tax Review</i><p hidden>International Tax Review Intertax <i>Intertax</i></p></td><td><i>Intertax</i></td></tr>
+<tr><td><i>Internationale fiscale actualiteit</i><p hidden>Internationale fiscale actualiteit Intern Fisc Act <i>Intern. Fisc. Act.</i></p></td><td><i>Intern. Fisc. Act.</i></td></tr>
+<tr><td><i>Internationale vervoerrecht over land en zee</i><p hidden>Internationale vervoerrecht over land en zee Intern Vervoerr <i>Intern. Vervoerr.</i></p></td><td><i>Intern. Vervoerr.</i></td></tr>
+<tr><td><i>Interuniversitair studententijdschrift</i><p hidden>Interuniversitair studententijdschrift Ius <i>Ius</i></p></td><td><i>Ius</i></td></tr>
+<tr><td><i>Ius</i><p hidden>Ius Ius <i>Ius</i></p></td><td><i>Ius</i></td></tr>
+<tr><td><i>Ius & Actores</i><p hidden>Ius & Actores Ius & Actores <i>Ius & Actores</i></p></td><td><i>Ius & Actores</i></td></tr>
+<tr><td><i>Iuvis</i><p hidden>Iuvis Iuvis <i>Iuvis</i></p></td><td><i>Iuvis</i></td></tr>
+<tr><td><i>Jaarboek handelspraktijken</i><p hidden>Jaarboek handelspraktijken Jb Hand <i>Jb. Hand.</i></p></td><td><i>Jb. Hand.</i></td></tr>
+<tr><td><i>Jaarboek handelspraktijken en mededinging</i><p hidden>Jaarboek handelspraktijken en mededinging Jb Hand Med <i>Jb. Hand. Med.</i></p></td><td><i>Jb. Hand. Med.</i></td></tr>
+<tr><td><i>Jaarboek kredietrecht</i><p hidden>Jaarboek kredietrecht Jb Kred <i>Jb. Kred.</i></p></td><td><i>Jb. Kred.</i></td></tr>
+<tr><td><i>Jaarboek kredietrecht en collectieve schuldenregeling</i><p hidden>Jaarboek kredietrecht en collectieve schuldenregeling Jb Kred CS <i>Jb. Kred. C.S.</i></p></td><td><i>Jb. Kred. C.S.</i></td></tr>
+<tr><td><i>Jaarboek lokale en regionale belastingen</i><p hidden>Jaarboek lokale en regionale belastingen Jb LRB <i>Jb. L.R.B.</i></p></td><td><i>Jb. L.R.B.</i></td></tr>
+<tr><td><i>Jaarboek van het Interuniversitair Centrum Mensenrechten</i><p hidden>Jaarboek van het Interuniversitair Centrum Mensenrechten Mensenrechten <i>Mensenrechten</i></p></td><td><i>Mensenrechten</i></td></tr>
+<tr><td>Journal<p hidden>Journal J Journ J. Journ.</p></td><td>J. ou Journ.</td></tr>
+<tr><td><i>Journal de droit européen</i><p hidden>Journal de droit europeen JDE <i>J.D.E.</i></p></td><td><i>J.D.E.</i></td></tr>
+<tr><td><i>Journal de droit fiscal</i><p hidden>Journal de droit fiscal JDF <br> Journ dr fisc <i>J.D.F. <br> Journ. dr. fisc.</i></p></td><td><i>J.D.F. <br> Journ. dr. fisc.</i></td></tr>
+<tr><td><i>Journal de la Police</i><p hidden>Journal de la Police J Police <i>J. Police</i></p></td><td><i>J. Police</i></td></tr>
+<tr><td><i>Journal des juges de paix</i><p hidden>Journal des juges de paix JJP <i>J.J.P.</i></p></td><td><i>J.J.P.</i></td></tr>
+<tr><td><i>Journal des juges de paix et de police</i><p hidden>Journal des juges de paix et de police JJP <i>J.J.P.</i></p></td><td><i>J.J.P.</i></td></tr>
+<tr><td><i>Journal des juristes démocrates</i><p hidden>Journal des juristes democrates JJD <i>J.J.D.</i></p></td><td><i>J.J.D.</i></td></tr>
+<tr><td><i>Journal des modes alternatifs</i><p hidden>Journal des modes alternatifs JMA <i>J.M.A.</i></p></td><td><i>J.M.A.</i></td></tr>
+<tr><td><i>Journal des procès</i><p hidden>Journal des proces Journ proc <i>Journ. proc.</i></p></td><td><i>Journ. proc.</i></td></tr>
+<tr><td><i>Journal des tribunaux</i><p hidden>Journal des tribunaux JT <i>J.T.</i></p></td><td><i>J.T.</i></td></tr>
+<tr><td><i>Journal des tribunaux – Droit européen</i><p hidden>Journal des tribunaux  Droit europeen JT  dr eur JTDE <i>J.T. – dr. eur.</i><br> <i>J.T.D.E.</i></p></td><td><i>J.T. – dr. eur.</i><br> <i>J.T.D.E.</i></td></tr>
+<tr><td><i>Journal des tribunaux d'outre-mer</i><p hidden>Journal des tribunaux d'outre-mer JTO <i>J.T.O.</i></p></td><td><i>J.T.O.</i></td></tr>
+<tr><td><i>Journal des tribunaux du travail</i><p hidden>Journal des tribunaux du travail JTT <i>J.T.T.</i></p></td><td><i>J.T.T.</i></td></tr>
+<tr><td><i>Journal des tribunaux Luxembourg</i><p hidden>Journal des tribunaux Luxembourg JTL <i>J.T.L.</i></p></td><td><i>J.T.L.</i></td></tr>
+<tr><td><i>Journal du droit des jeunes</i><p hidden>Journal du droit des jeunes Journ dr j <br> JDJ <i>Journ. dr. j. <br> J.D.J.</i></p></td><td><i>Journ. dr. j. <br> J.D.J.</i></td></tr>
+<tr><td><i>Journal du droit international (Clunet – France)</i><p hidden>Journal du droit international Clunet  France Journ dr intern Clunet<i>Journ. dr. intern. Clunet</i></p></td><td><i>Journ. dr. intern.</i> ou <i>Clunet</i></td></tr>
+<tr><td><i>Journal européen de droit international</i><p hidden>Journal europeen de droit international JEDI <i>JEDI</i></p></td><td><i>JEDI</i></td></tr>
+<tr><td><i>Journal européen des droits de l'homme</i><p hidden>Journal europeen des droits de l'homme JEDH <i>J.E.D.H.</i></p></td><td><i>J.E.D.H.</i></td></tr>
+<tr><td><i>Journal of common markets studies</i><p hidden>Journal of common markets studies JCMS <i>J.C.M.S.</i></p></td><td><i>J.C.M.S.</i></td></tr>
+<tr><td><i>Journal of international economic law</i><p hidden>Journal of international economic law JIEL <i>J.I.E.L.</i></p></td><td><i>J.I.E.L.</i></td></tr>
+<tr><td><i>Journal of world trade</i><p hidden>Journal of world trade JWT <i>J.W.T.</i></p></td><td><i>J.W.T.</i></td></tr>
+<tr><td><i>Journal pratique de droit fiscal et financier</i><p hidden>Journal pratique de droit fiscal et financier Journ prat dr fisc fin <i>Journ. prat. dr. fisc. fin.</i></p></td><td><i>Journ. prat. dr. fisc. fin.</i></td></tr>
+<tr><td>Juge de l'application des peines<p hidden>Juge de l'application des peines J app peines J. app. peines</p></td><td>J. app. peines</td></tr>
+<tr><td>Juge des saisies<p hidden>Juge des saisies sais sais.</p></td><td>sais.</td></tr>
+<tr><td><i>Juger</i><p hidden>Juger Juger <i>Juger</i></p></td><td><i>Juger</i></td></tr>
+<tr><td><i>Jura Falconis</i><p hidden>Jura Falconis Jura Falc <i>Jura Falc.</i></p></td><td><i>Jura Falc.</i></td></tr>
+<tr><td><i>Jurim Pratique</i><p hidden>Jurim Pratique Jurim Pratique <i>Jurim Pratique</i></p></td><td><i>Jurim Pratique</i></td></tr>
+<tr><td>Jurisprudence<p hidden>Jurisprudence J Jur J. Jur.</p></td><td>J. ou Jur.</td></tr>
+<tr><td><i>Jurisprudence commerciale de Belgique</i><p hidden>Jurisprudence commerciale de Belgique JCB <i>J.C.B.</i></p></td><td><i>J.C.B.</i></td></tr>
+<tr><td><i>Jurisprudence commerciale de Bruxelles</i><p hidden>Jurisprudence commerciale de Bruxelles Jur comm Brux <i>Jur. comm. Brux.</i></p></td><td><i>Jur. comm. Brux.</i></td></tr>
+<tr><td><i>Jurisprudence commerciale des Flandres</i><p hidden>Jurisprudence commerciale des Flandres Jur comm Fl JC Fl <i>Jur. comm. Fl.</i><br><i>J.C. Fl.</i></p></td><td><i>Jur. comm. Fl.</i><br><i>J.C. Fl.</i></td></tr>
+<tr><td><i>Jurisprudence de Liège</i><p hidden>Jurisprudence de Liege JL <i>J.L.</i></p></td><td><i>J.L.</i></td></tr>
+<tr><td><i>Jurisprudence des juridictions du travail de Bruxelles</i><p hidden>Jurisprudence des juridictions du travail de Bruxelles Jur trav Brux <i>Jur. trav. Brux.</i></p></td><td><i>Jur. trav. Brux.</i></td></tr>
+<tr><td><i>Jurisprudence du Code judiciaire</i><p hidden>Jurisprudence du Code judiciaire JCJ <i>J.C.J.</i></p></td><td><i>J.C.J.</i></td></tr>
+<tr><td><i>Jurisprudence du droit social. Bruxelles – Louvain – Nivelles</i><p hidden>Jurisprudence du droit social Bruxelles  Louvain  Nivelles Jur dr soc BLN <br> Jur dr soc Bruxelles  Louvain  Nivelles <i>Jur. dr. soc. B.L.N. <br> Jur. dr. soc. Bruxelles – Louvain – Nivelles</i></p></td><td><i>Jur. dr. soc. B.L.N. <br> Jur. dr. soc. Bruxelles – Louvain – Nivelles</i></td></tr>
+<tr><td><i>Jurisprudence du louage d'ouvrage</i><p hidden>Jurisprudence du louage d'ouvrage JLO <i>J.L.O.</i></p></td><td><i>J.L.O.</i></td></tr>
+<tr><td><i>Jurisprudence du port d'Anvers</i><p hidden>Jurisprudence du port d'Anvers JPA <i>J.P.A.</i></p></td><td><i>J.P.A.</i></td></tr>
+<tr><td><i>Jurisprudence et informations de l'Ordre des pharmaciens</i><p hidden>Jurisprudence et informations de l'Ordre des pharmaciens J Orde Pharm <i>J. Orde Pharm.</i></p></td><td><i>J. Orde Pharm.</i></td></tr>
+<tr><td><i>Jurisprudence fiscale</i><p hidden>Jurisprudence fiscale FJF <i>F.J.F.</i></p></td><td><i>F.J.F.</i></td></tr>
+<tr><td><i>Jurisprudence fondamentale</i><p hidden>Jurisprudence fondamentale Jur fond <i>Jur. fond.</i></p></td><td><i>Jur. fond.</i></td></tr>
+<tr><td><i>Jurisprudence. Féderation professionnelle des producteurs et distributeurs d'électricité de Belgique. FPE</i><p hidden>Jurisprudence Federation professionnelle des producteurs et distributeurs d'electricite de Belgique FPE JurFPE <i>Jur.F.P.E.</i></p></td><td><i>Jur.F.P.E.</i></td></tr>
+<tr><td><i>Just News</i><p hidden>Just News Just News <i>Just News</i></p></td><td><i>Just News</i></td></tr>
+<tr><td>Justice de paix<p hidden>Justice de paix JP J.P.</p></td><td>J.P.</td></tr>
+<tr><td><i>Justice-en-ligne</i><p hidden>Justice-en-ligne JEL <i>J.E.L.</i></p></td><td><i>J.E.L.</i></td></tr>
+<tr><td><i>La Revue fiscale</i><p hidden>Revue fiscale La Rev fisc <i>Rev. fisc.</i></p></td><td><i>Rev. fisc.</i></td></tr>
+<tr><td><i>La Revue politique</i><p hidden>Revue politique La Rev pol <i>Rev. pol.</i></p></td><td><i>Rev. pol.</i></td></tr>
+<tr><td><i>La semaine fiscale</i><p hidden>La semaine fiscale Sem Fisc <i>Sem. Fisc.</i></p></td><td><i>Sem. Fisc.</i></td></tr>
+<tr><td><i>La Semaine juridique</i><p hidden>Semaine juridique La  Sem jur <i>Sem. jur.</i></p></td><td><i>Sem. jur.</i></td></tr>
+<tr><td><i>La semaine sociale</i><p hidden>La semaine sociale Sem Soc <i>Sem. Soc.</i></p></td><td><i>Sem. Soc.</i></td></tr>
+<tr><td><i>L'Actualité juridique. Droit administratif</i><p hidden>L'Actualite juridique  Droit administratif AJDA Act jur DA <i>A.J.D.A.</i><br><i>Act. jur. D.A.</i></p></td><td><i>A.J.D.A.</i><br><i>Act. jur. D.A.</i></td></tr>
+<tr><td><i>L'Actualité juridique. Droit immobilier</i><p hidden>L'Actualite juridique Droit immobilier AJDI Act jur I <i>A.J.D.I.<br> Act. jur. I.</i></p></td><td><i>A.J.D.I.<br> Act. jur. I.</i></td></tr>
+<tr><td><i>Law & European Affairs</i><p hidden>Law & European Affairs LEA <i>L.E.A.</i></p></td><td><i>L.E.A.</i></td></tr>
+<tr><td><i>Le Courrier fiscal</i><p hidden>Le Courrier fiscal Cour fisc <i>Cour. fisc.</i></p></td><td><i>Cour. fisc.</i></td></tr>
+<tr><td><i>Le Droit des affaires — Het Ondernemingsrecht</i><p hidden>Le Droit des affaires   Het Ondernemingsrecht DAOR DAOR DA <i>DA-OR <br> DAOR <br> D.A.</i></p></td><td><i>DA-OR <br> DAOR <br> D.A.</i></td></tr>
+<tr><td><i>Le Journal du juriste</i><p hidden>Journal du juriste Le  Journ jur <i>Journ. jur.</i></p></td><td><i>Journ. jur.</i></td></tr>
+<tr><td><i>Le Monde de l'assurance</i><p hidden>Monde de l'assurance Monde ass <i>Monde ass.</i></p></td><td><i>Monde ass.</i></td></tr>
+<tr><td><i>Le Trait d'union</i><p hidden>Trait d'union Le trait d'union <i>Le trait d'union</i></p></td><td><i>Le trait d'union</i></td></tr>
+<tr><td><i>Legal Issues of European Integration</i><p hidden>Legal Issues of European Integration LIEI <i>L.I.E.I.</i></p></td><td><i>L.I.E.I.</i></td></tr>
+<tr><td><i>L'Entreprise et le droit</i><p hidden>L'Entreprise et le droit Entr et dr <i>Entr. et dr.</i></p></td><td><i>Entr. et dr.</i></td></tr>
+<tr><td><i>Les Baux – Commentaire pratique</i><p hidden>Baux Les  Commentaire pratique Baux Les  Commentaire pratique <i>Les Baux – Commentaire pratique</i></p></td><td><i>Les Baux – Commentaire pratique</i></td></tr>
+<tr><td><i>Les Cahiers constitutionnels</i><p hidden>Les Cahiers constitutionnels  Cah const <i>Cah. const.</i></p></td><td><i>Cah. const.</i></td></tr>
+<tr><td><i>Les Cahiers de la sécurité intérieure</i><p hidden>Les Cahiers de la securite interieure Cah SI <i>Cah. S.I.</i></p></td><td><i>Cah. S.I.</i></td></tr>
+<tr><td><i>Les Cahiers des sciences administratives</i><p hidden>Les Cahiers des sciences administratives CSA <i>C.S.A.</i></p></td><td><i>C.S.A.</i></td></tr>
+<tr><td><i>Les Échos du logement</i><p hidden>Les echos du logement echos log <i>Échos log.</i></p></td><td><i>Échos log.</i></td></tr>
+<tr><td><i>Les Novelles</i><p hidden>Novelles Les  Novelles <i>Novelles</i></p></td><td><i>Novelles</i></td></tr>
+<tr><td><i>L'Expert comptable belge</i><p hidden>L'Expert-comptable belge L'Expcompt B <i>L'Exp.-compt. B.</i></p></td><td><i>L'Exp.-compt. B.</i></td></tr>
+<tr><td><i>L'Hôpital belge</i><p hidden>Hopital belge  L'hop belge <i>L'hôp. belge</i></p></td><td><i>L'hôp. belge</i></td></tr>
+<tr><td><i>L'Huissier de justice</i><p hidden>Huissier de justice Huissier just <br> Huis just <i>Huissier just. <br> Huis. just.</i></p></td><td><i>Huissier just. <br> Huis. just.</i></td></tr>
+<tr><td><i>L'Huissier de justice – Digest</i><p hidden>Huissier de justice  Digest Huis justdigest <i>Huis. just.-digest</i></p></td><td><i>Huis. just.-digest</i></td></tr>
+<tr><td><i>L'Ingénieur – Conseil (Revue de droit intellectuel)</i> <br> Depuis 2008 : <i>L'ingénieur Conseil / Intellectual Property (ICIP)</i><p hidden>Ingenieur-Conseil Revue de droit intellectuel Intellectual property  IngCons <br> ICIP <i>Ing.-Cons. <br> ICIP</i></p></td><td><i>Ing.-Cons. <br> ICIP</i></td></tr>
+<tr><td><i>Littera</i><p hidden>Littera litt <i>litt.</i></p></td><td><i>litt.</i></td></tr>
+<tr><td>Livre<p hidden>Livre liv liv.</p></td><td>liv.</td></tr>
+<tr><td><i>Loco citato</i> (dans une source citée précédemment)<p hidden>Loco citato loc cit <i>loc. cit.</i></p></td><td><i>loc. cit.</i></td></tr>
+<tr><td>Loi<p hidden>Loi L Loi L. <br>Loi</p></td><td>L. <br>Loi</td></tr>
+<tr><td>Loi spéciale<p hidden>Loi speciale L spec L. spéc.</p></td><td>L. spéc.</td></tr>
+<tr><td>Lois coordonnées<p hidden>Lois coordonnees L coord LC L. coord. <br>L.C.</p></td><td>L. coord. <br>L.C.</td></tr>
+<tr><td>Lois coordonnées sur le Conseil d'État par A.R. du 12 janvier 1973<p hidden>Lois coordonnees sur le Conseil d'etat par AR du 12 janvier 1973 LCCE L.C.C.E.</p></td><td>L.C.C.E.</td></tr>
+<tr><td><i>Maastricht Journal of European and Comparative Law</i><p hidden>Maastricht Journal of European and Comparative Law MJ <i>M.J.</i></p></td><td><i>M.J.</i></td></tr>
+<tr><td><i>Marchés Contrats publics / Overheidsopdrachten en -Overeenkomsten</i><p hidden>Marches Contrats publics Overheidsopdrachten en Overeenkomsten MCP <i>MCP <br> M.C.P.</i></p></td><td><i>MCP <br> M.C.P.</i></td></tr>
+<tr><td><i>Marxistisch juridisch tijdschrift</i><p hidden>Marxistisch juridisch tijdschrift MJT <i>M.J.T.</i></p></td><td><i>M.J.T.</i></td></tr>
+<tr><td><i>Mensuel du notariat et de la fiscalité</i><p hidden>Mensuel du notariat et de la fiscalite M not Fisc <i>M. not. Fisc.</i></p></td><td><i>M. not. Fisc.</i></td></tr>
+<tr><td>Ministère public<p hidden>Ministere public MP Min publ M.P. <br> Min. publ.</p></td><td>M.P. <br> Min. publ.</td></tr>
+<tr><td><i>Moniteur belge</i><p hidden>Moniteur belge MB <i>M.B.</i></p></td><td><i>M.B.</i></td></tr>
+<tr><td><i>Nederlands Juristenblad</i><p hidden>Nederlands Juristenblad NJB <i>N.J.B.</i></p></td><td><i>N.J.B.</i></td></tr>
+<tr><td><i>Nederlands Tijdschrift voor Criminologie</i><p hidden>Nederlands Tijdschrift voor Criminologie Ned T crim <i>Ned. T. crim.</i></p></td><td><i>Ned. T. crim.</i></td></tr>
+<tr><td><i>Netherlands International Law Review</i><p hidden>Netherlands International Law Review NILR <i>N.I.L.R.</i></p></td><td><i>N.I.L.R.</i></td></tr>
+<tr><td><i>Netherlands Quarterly of Human Rights</i><p hidden>Netherlands Quarterly of Human Rights NQHR <i>N.Q.H.R.</i></p></td><td><i>N.Q.H.R.</i></td></tr>
+<tr><td><i>New York University international journal of law and politics</i><p hidden>New York University international journal of law and politics NYUJInt'lL&P <i>NYU.J.Int'l.L&P.</i></p></td><td><i>NYU.J.Int'l.L&P.</i></td></tr>
+<tr><td><i>Nieuw Juridisch Weekblad</i><p hidden>Nieuw Juridisch Weekblad NJW NjW <i>N.J.W. <br> NjW</i></p></td><td><i>N.J.W. <br> NjW</i></td></tr>
+<tr><td><i>Nieuw Tijdschrift van de Vrije Universiteit</i><p hidden>Nieuw Tijdschrift van de Vrije Universiteit N Tijd <i>N. Tijd.</i></p></td><td><i>N. Tijd.</i></td></tr>
+<tr><td><i>Nota bene</i><p hidden>Nota bene NB <i>N.B.</i></p></td><td><i>N.B.</i></td></tr>
+<tr><td>Notamment<p hidden>Notamment not not.</p></td><td>not.</td></tr>
+<tr><td><i>Notamus</i><p hidden>Notamus Notamus <i>Notamus</i></p></td><td><i>Notamus</i></td></tr>
+<tr><td><i>Nullum Crimen</i><p hidden>Nullum Crimen NC <i>N.C.</i></p></td><td><i>N.C.</i></td></tr>
+<tr><td>Numéro<p hidden>Numero n° n°</p></td><td>n°</td></tr>
+<tr><td><i>Observateur de Bruxelles</i><p hidden>Observateur de Bruxelles Obs Bxl <i>Obs. Bxl.</i></p></td><td><i>Obs. Bxl.</i></td></tr>
+<tr><td>Observations<p hidden>Observations obs obs.</p></td><td>obs.</td></tr>
+<tr><td><i>Opus citatum</i> (étude déja citée)<p hidden>Opus citatum op cit oc op. cit. o.c.</i></p></td><td><i>op. cit.</i> ou <i>o.c.</td></tr>
+<tr><td>Ordonnance<p hidden>Ordonnance Ord Ord.</p></td><td>Ord.</td></tr>
+<tr><td>Ordonnance de l'Assemblée réunie de la Commission communautaire commune<p hidden>Ordonnance de l'Assemblee reunie de la Commission communautaire commune Ord CCC Ord. C.C.C.</p></td><td>Ord. C.C.C.</td></tr>
+<tr><td>Ordonnance du Parlement de la Région de Bruxelles-Capitale<p hidden>Ordonnance du Parlement de la Region de Bruxelles-Capitale Ord Reg BruxCap Ord. Rég. Brux.-Cap.</p></td><td>Ord. Rég. Brux.-Cap.</td></tr>
+<tr><td>Organisation des Nations unies<p hidden>Organisation des Nations unies ONU ONU</p></td><td>ONU</td></tr>
+<tr><td>Organisation des Nations unies pour l'éducation, la science et la culture<p hidden>Organisation des Nations unies pour l'education, la science et la culture UNESCO UNESCO</p></td><td>UNESCO</td></tr>
+<tr><td>Organisation internationale du Travail<p hidden>Organisation internationale du Travail OIT OIT</p></td><td>OIT</td></tr>
+<tr><td>Organisation mondiale de la santé<p hidden>Organisation mondiale de la sante OMS OMS</p></td><td>OMS</td></tr>
+<tr><td><i>Orientations : droit social – gestion du personnel</i><p hidden>Orientations : droit social  gestion du personnel Ors <br> Orientations <i>Ors. <br> Orientations</i></p></td><td><i>Ors. <br> Orientations</i></td></tr>
+<tr><td>Page<p hidden>Page p p</p></td><td>p</td></tr>
+<tr><td>Pages<p hidden>Pages pp pp.</p></td><td>pp.</td></tr>
+<tr><td>Par exemple<p hidden>Par exemple pex p.ex.</p></td><td>p.ex.</td></tr>
+<tr><td>Paragraphe<p hidden>Paragraphe § par § <br> par.</p></td><td>§ <br> par.</td></tr>
+<tr><td>Parlement de la Communauté francaise<p hidden>Parlement de la Communaute francaise Parl Comm fr Parl. Comm. fr.</p></td><td>Parl. Comm. fr.</td></tr>
+<tr><td>Parlement de la Communauté germanophone<p hidden>Parlement de la Communaute germanophone Parl Comm germ Parl. Comm. germ.</p></td><td>Parl. Comm. germ.</td></tr>
+<tr><td>Parlement de la Région de Bruxelles-Capitale<p hidden>Parlement de la Region de Bruxelles-Capitale Parl Reg BruxCap Parl. Rég. Brux.-Cap.</p></td><td>Parl. Rég. Brux.-Cap.</td></tr>
+<tr><td>Parlement européen<p hidden>Parlement europeen PE P.E.</p></td><td>P.E.</td></tr>
+<tr><td>Parlement flamand<p hidden>Parlement flamand Parl fl Parl. fl.</p></td><td>Parl. fl.</td></tr>
+<tr><td>Parlement wallon<p hidden>Parlement wallon Parl w Parl. w.</p></td><td>Parl. w.</td></tr>
+<tr><td><i>Pasicrisie</i><p hidden>Pasicrisie Pas <i>Pas.</i></p></td><td><i>Pas.</i></td></tr>
+<tr><td>Plus haut<p hidden>Plus haut supra <i>supra</i></p></td><td><i>supra</i></td></tr>
+<tr><td>Plus loin / plus bas<p hidden>Plus loinplus bas infra <i>infra</i></p></td><td><i>infra</i></td></tr>
+<tr><td>Pour mémoire<p hidden>Pour memoire pm p.m.</p></td><td>p.m.</td></tr>
+<tr><td>Premier<p hidden>Premier prem prem.</p></td><td>prem.</td></tr>
+<tr><td>Premier substitut du procureur du Roi<p hidden>Premier substitut du procureur du Roi Prem subst proc Roi Prem. subst. proc. Roi</p></td><td>Prem. subst. proc. Roi</td></tr>
+<tr><td>Président<p hidden>President Pres Prés.</p></td><td>Prés.</td></tr>
+<tr><td><i>Pro justitia</i><p hidden>Pro justitia pro jus <i>pro jus.</i></p></td><td><i>pro jus.</i></td></tr>
+<tr><td><i>Pro memorie</i><p hidden>Pro memorie PM <i>P.M.</i></p></td><td><i>P.M.</i></td></tr>
+<tr><td>Procès-verbal<p hidden>Proces-verbal PV P.V.</p></td><td>P.V.</td></tr>
+<tr><td>Procureur du Roi<p hidden>Procureur du Roi Proc Roi Proc. Roi</p></td><td>Proc. Roi</td></tr>
+<tr><td>Procureur général<p hidden>Procureur general Proc gen Proc. gén.</p></td><td>Proc. gén.</td></tr>
+<tr><td>Protocole<p hidden>Protocole Prot Prot.</p></td><td>Prot.</td></tr>
+<tr><td>Province<p hidden>Province Prov Prov.</p></td><td>Prov.</td></tr>
+<tr><td>Publications<p hidden>Publications publ publ.</p></td><td>publ.</td></tr>
+<tr><td><i>Qualitate qua</i><p hidden>Qualitate qua qq <i>q.q.</i></p></td><td><i>q.q.</i></td></tr>
+<tr><td><i>Questions et réponses</i><p hidden>Questions et reponses QR <i>Q.R.</i></p></td><td><i>Q.R.</i></td></tr>
+<tr><td>Rapport<p hidden>Rapport rapp rapp.</p></td><td>rapp.</td></tr>
+<tr><td>Rapporteur<p hidden>Rapporteur Rapp Rapp.</p></td><td>Rapp.</td></tr>
+<tr><td><i>Rechtskundig Weekblad</i><p hidden>Rechtskundig Weekblad RW <i>R.W.</i></p></td><td><i>R.W.</i></td></tr>
+<tr><td><i>Rechtspraak Antwerpen, Brussel, Gent</i><p hidden>Rechtspraak Antwerpen, Brussel, Gent RABG <i>R.A.B.G.</i></p></td><td><i>R.A.B.G.</i></td></tr>
+<tr><td>Recommandation<p hidden>Recommandation Rec Rec.</p></td><td>Rec.</td></tr>
+<tr><td><i>Recueil Dalloz</i><p hidden>Recueil Dalloz D <i>D.</i></p></td><td><i>D.</i></td></tr>
+<tr><td><i>Recueil des arrêts du Conseil d'État</i><p hidden>Recueil des arrets du Conseil d'etat RACE <i>R.A.C.E.</i></p></td><td><i>R.A.C.E.</i></td></tr>
+<tr><td>Réédition<p hidden>Reedition reed rééd.</p></td><td>rééd.</td></tr>
+<tr><td>Référé (ordonnance en -)<p hidden>ordonnance en refere ref réf.</p></td><td>réf.</td></tr>
+<tr><td>Réformant<p hidden>Reformant reform réform.</p></td><td>réform.</td></tr>
+<tr><td>Région Bruxelles-Capitale<p hidden>Region Bruxelles-Capitale Reg BruxCap Rég. Brux.-Cap.</p></td><td>Rég. Brux.-Cap.</td></tr>
+<tr><td>Région flamande<p hidden>Region flamande Reg fl Rég. fl.</p></td><td>Rég. fl.</td></tr>
+<tr><td>Région wallonne<p hidden>Region wallonne Reg w Rég. w.</p></td><td>Rég. w.</td></tr>
+<tr><td>Règlement<p hidden>Reglement Regl Règl.</p></td><td>Règl.</td></tr>
+<tr><td>Règlement communal<p hidden>Reglement communal Regl comm Règl. comm.</p></td><td>Règl. comm.</td></tr>
+<tr><td>Règlement de l'Assemblée de la Commission communautaire flamande<p hidden>Reglement de l'Assemblee de la Commission communautaire flamande Regl CC fl Règl. C.C. fl.</p></td><td>Règl. C.C. fl.</td></tr>
+<tr><td>Règlement de l'Assemblée de la Commission communautaire francaise<p hidden>Reglement de l'Assemblee de la Commission communautaire francaise Regl CC fr Règl. C.C. fr.</p></td><td>Règl. C.C. fr.</td></tr>
+<tr><td>Règlement de l'Assemblée réunie de la Commission communautaire commune<p hidden>Reglement de l'Assemblee reunie de la Commission communautaire commune Regl CCC Règl. C.C.C.</p></td><td>Règl. C.C.C.</td></tr>
+<tr><td>Règlement provincial<p hidden>Reglement provincial Regl prov Règl. prov.</p></td><td>Règl. prov.</td></tr>
+<tr><td>Réimpression<p hidden>Reimpression reimpr réimpr.</p></td><td>réimpr.</td></tr>
+<tr><td>Rejet – rejetant<p hidden>Rejet  rejetant rej rej.</p></td><td>rej.</td></tr>
+<tr><td><i>Res & Jura Immobilia</i><p hidden>Res & Jura Immobilia RJI RJI <i>R.J.I. <br> RJI</i></p></td><td><i>R.J.I. <br> RJI</i></td></tr>
+<tr><td>Résolution – resolutie<p hidden>Resolution  resolutie Resol Résol.</p></td><td>Résol.</td></tr>
+<tr><td>Réunies<p hidden>Reunies reun réun.</p></td><td>réun.</td></tr>
+<tr><td><i>Revue bancaire et financière / Bank- en Financiewezen</i><p hidden>Revue bancaire et financiere  Bank- en Financiewezen BFA <i>B.F.A.</i></p></td><td><i>B.F.A.</i></td></tr>
+<tr><td><i>Revue belge de droit constitutionnel</i><p hidden>Revue belge de droit constitutionnel RBDC <i>R.B.D.C.</i></p></td><td><i>R.B.D.C.</i></td></tr>
+<tr><td><i>Revue belge de droit international</i><p hidden>Revue belge de droit international RBDI <i>R.B.D.I.</i></p></td><td><i>R.B.D.I.</i></td></tr>
+<tr><td><i>Revue belge du dommage corporel et de médecine légale (Consilio Manuque)</i><p hidden>Revue belge du dommage corporel et de medecine legale Consilio Manuque Con M <i>Con. M.</i></p></td><td><i>Con. M.</i></td></tr>
+<tr><td><i>Revue critique de jurisprudence belge</i><p hidden>Revue critique de jurisprudence belge RCJB <i>R.C.J.B.</i></p></td><td><i>R.C.J.B.</i></td></tr>
+<tr><td><i>Revue de droit commercial belge / Tijdschrift voor Belgisch Handelsrecht</i><p hidden>Revue de droit commercial belge  Tijdschrift voor Belgisch Handelsrecht RDC  TBH <i>RDC - TBH</i></p></td><td><i>RDC - TBH</i></td></tr>
+<tr><td><i>Revue de Droit des Technologies de l'Information</i><p hidden>Revue de Droit des Technologies de l'Information RDTI <i>R.D.T.I.</i></p></td><td><i>R.D.T.I.</i></td></tr>
+<tr><td><i>Revue de droit international et de droit comparé</i><p hidden>Revue de droit international et de droit compare RDIDC <br> Rev dr intern comp <i>R.D.I.D.C. <br> Rev. dr. intern. comp.</i></p></td><td><i>R.D.I.D.C. <br> Rev. dr. intern. comp.</i></td></tr>
+<tr><td><i>Revue de droit international privé / Tijdschrift voor Internationaal Privaatrecht</i><p hidden>Revue de droit international prive  Tijdschrift voor Internationaal Privaatrecht RBDIPT IPR <i>R.B.D.I.P.-T. I.P.R.</i></p></td><td><i>R.B.D.I.P.-T. I.P.R.</i></td></tr>
+<tr><td><i>Revue de droit judiciaire et de la preuve / Proces en Bewijs</i><p hidden>Revue de droit judiciaire et de la preuve  Proces en Bewijs RDJP / P&B <i>R.D.J.P. / P.&B.</i></p></td><td><i>R.D.J.P. / P.&B.</i></td></tr>
+<tr><td><i>Revue de droit minier</i><p hidden>Revue de droit minier Rev dr min <i>Rev. dr. min.</i></p></td><td><i>Rev. dr. min.</i></td></tr>
+<tr><td><i>Revue de droit pénal et de criminologie</i><p hidden>Revue de droit penal et de criminologie Rev dr pen crim <i>Rev. dr. pén. crim.</i></p></td><td><i>Rev. dr. pén. crim.</i></td></tr>
+<tr><td><i>Revue de droit pénal militaire et de droit de la guerre</i><p hidden>Revue de droit penal militaire et de droit de la guerre Rev dr pen mil <i>Rev. dr. pén. mil.</i></p></td><td><i>Rev. dr. pén. mil.</i></td></tr>
+<tr><td><i>Revue de droit pénitentiaire et de droit pénal</i><p hidden>Revue de droit penitentiaire et de droit penal LJIL <i>L.J.I.L.</i></p></td><td><i>L.J.I.L.</i></td></tr>
+<tr><td><i>Revue de droit rural</i><p hidden>Revue de droit rural Rev dr rur <i>Rev. dr. rur.</i></p></td><td><i>Rev. dr. rur.</i></td></tr>
+<tr><td><i>Revue de droit sanitaire et social</i><p hidden>Revue de droit sanitaire et social Rev dr sanit et soc <i>Rev. dr. sanit. et soc.</i></p></td><td><i>Rev. dr. sanit. et soc.</i></td></tr>
+<tr><td><i>Revue de droit social</i><p hidden>Revue de droit social RDS <i>R.D.S.</i></p></td><td><i>R.D.S.</i></td></tr>
+<tr><td><i>Revue de fiscalité régionale et locale</i><p hidden>Revue de fiscalite regionale et locale RFRL <i>R.F.R.L.</i></p></td><td><i>R.F.R.L.</i></td></tr>
+<tr><td><i>Revue de jurisprudence commerciale</i><p hidden>Revue de jurisprudence commerciale Rev jur comm <i>Rev. jur. comm.</i></p></td><td><i>Rev. jur. comm.</i></td></tr>
+<tr><td><i>Revue de jurisprudence de Liège, Mons et Bruxelles</i><p hidden>Revue de jurisprudence de Liege, Mons et Bruxelles JLMB <i>J.L.M.B.</i></p></td><td><i>J.L.M.B.</i></td></tr>
+<tr><td><i>Revue de jurisprudence du Hainaut</i><p hidden>Revue de jurisprudence du Hainaut Jur Hainaut <i>Jur. Hainaut</i></p></td><td><i>Jur. Hainaut</i></td></tr>
+<tr><td><i>Revue de la banque</i><p hidden>Revue de la banque Rev Banq <i>Rev. Banq.</i></p></td><td><i>Rev. Banq.</i></td></tr>
+<tr><td><i>Revue de la concurrence belge</i><p hidden>Revue de la concurrence belge RCB <i>R.C.B.</i></p></td><td><i>R.C.B.</i></td></tr>
+<tr><td><i>Revue de la Faculté de droit de l'université de Liège</i><p hidden>Revue de la Faculte de droit de l'universite de Liege Rev Dr ULg <br> Rev Dr ULiege <i>Rev. Dr. ULg <br> Rev. Dr. ULiège</i></p></td><td><i>Rev. Dr. ULg <br> Rev. Dr. ULiège</i></td></tr>
+<tr><td><i>Revue de la gendarmerie</i><p hidden>Revue de la gendarmerie Rev Gd <i>Rev. Gd.</i></p></td><td><i>Rev. Gd.</i></td></tr>
+<tr><td><i>Revue de la recherche juridique – Droit prospectif</i><p hidden>Revue de la recherche juridique  Droit prospectif IDj <i>IDj</i></p></td><td><i>IDj</i></td></tr>
+<tr><td><i>Revue de la T.V.A.</i><p hidden>Revue de la TVA Rev TVA <i>Rev. T.V.A.</i></p></td><td><i>Rev. T.V.A.</i></td></tr>
+<tr><td><i>Revue de l'administration et du droit administratif de la Belgique</i><p hidden>Revue de l'administration et du droit administratif de la Belgique Rev adm <i>Rev. adm.</i></p></td><td><i>Rev. adm.</i></td></tr>
+<tr><td><i>Revue de l'arbitrage</i><p hidden>Revue de l'arbitrage Rev arb <i>Rev. arb.</i></p></td><td><i>Rev. arb.</i></td></tr>
+<tr><td><i>Revue de l'expert</i><p hidden>Revue de l'expert Rev Exp <br> Rev Expert <i>Rev. Exp. <br> Rev. Expert</i></p></td><td><i>Rev. Exp. <br> Rev. Expert</i></td></tr>
+<tr><td><i>Revue de l'Institut de sociologie de l'Université libre de Bruxelles</i><p hidden>Revue de l'Institut de sociologie de l'Universite libre de Bruxelles Rev Inst soc <i>Rev. Inst. soc.</i></p></td><td><i>Rev. Inst. soc.</i></td></tr>
+<tr><td><i>Revue de l'Université libre de Bruxelles</i><p hidden>Revue de l'Universite libre de Bruxelles Rev ULB <i>Rev. U.L.B.</i></p></td><td><i>Rev. U.L.B.</i></td></tr>
+<tr><td><i>Revue de science criminelle et de droit pénal comparé</i><p hidden>Revue de science criminelle et de droit penal compare Rev sc crim <i>Rev. sc. crim. <br> RSC</i></p></td><td><i>Rev. sc. crim. <br> RSC</i></td></tr>
+<tr><td><i>Revue de science financière</i><p hidden>Revue de science financiere Rev sc fin <i>Rev. sc. fin.</i></p></td><td><i>Rev. sc. fin.</i></td></tr>
+<tr><td><i>Revue des accidents du travail et de droit industriel</i><p hidden>Revue des accidents du travail et de droit industriel Rev acc trav <i>Rev. acc. trav.</i></p></td><td><i>Rev. acc. trav.</i></td></tr>
+<tr><td><i>Revue des affaires européennes</i><p hidden>Revue des affaires europeennes RAE <i>R.A.E.</i></p></td><td><i>R.A.E.</i></td></tr>
+<tr><td><i>Revue des droits de l'homme</i><p hidden>Revue des droits de l'homme Rev dr hom Rev dr h <i>Rev. dr. hom. <br> Rev. dr. h.</i></p></td><td><i>Rev. dr. hom. <br> Rev. dr. h.</i></td></tr>
+<tr><td><i>Revue des faillites, concordats et liquidations</i><p hidden>Revue des faillites, concordats et liquidations Rev faill <i>Rev. faill.</i></p></td><td><i>Rev. faill.</i></td></tr>
+<tr><td><i>Revue des huissiers de justice</i><p hidden>Revue des huissiers de justice Rev huissiers <i>Rev. huissiers</i></p></td><td><i>Rev. huissiers</i></td></tr>
+<tr><td><i>Revue des loyers</i><p hidden>Revue des loyers Rev loyers <i>Rev. loyers</i></p></td><td><i>Rev. loyers</i></td></tr>
+<tr><td><i>Revue des receveurs</i><p hidden>Revue des receveurs Rev rec <i>Rev. rec.</i></p></td><td><i>Rev. rec.</i></td></tr>
+<tr><td><i>Revue d'histoire du droit</i><p hidden>Revue d'histoire du droit Rev hist dr <i>Rev. hist. dr.</i></p></td><td><i>Rev. hist. dr.</i></td></tr>
+<tr><td><i>Revue du droit de l'Union européenne</i><p hidden>Revue du droit de l'Union europeenne RDUE <i>R.D.U.E.</i></p></td><td><i>R.D.U.E.</i></td></tr>
+<tr><td><i>Revue du droit de police</i><p hidden>Revue du droit de police Rev dr pol <i>Rev. dr. pol.</i></p></td><td><i>Rev. dr. pol.</i></td></tr>
+<tr><td><i>Revue du droit des étrangers</i><p hidden>Revue du droit des etrangers Rev dr etr <i>Rev. dr. étr.</i></p></td><td><i>Rev. dr. étr.</i></td></tr>
+<tr><td><i>Revue du droit des technologies de l'information</i><p hidden>Revue du droit des technologies de l'information RDT I <i>R.D.T. I.</i></p></td><td><i>R.D.T. I.</i></td></tr>
+<tr><td><i>Revue du droit public et de la science politique</i><p hidden>Revue du droit public et de la science politique Rev dr publ RDP <i>Rev. dr. publ. <br> R.D.P.</i></p></td><td><i>Rev. dr. publ. <br> R.D.P.</i></td></tr>
+<tr><td><i>Revue du Marché commun et de l'Union européenne</i><p hidden>Revue du Marche commun et de l'Union europeenne RMCUE <i>R.M.C.U.E.</i></p></td><td><i>R.M.C.U.E.</i></td></tr>
+<tr><td><i>Revue du Marché unique européen</i><p hidden>Revue du Marche unique europeen RMUE <i>R.M.U.E.</i></p></td><td><i>R.M.U.E.</i></td></tr>
+<tr><td><i>Revue du notariat belge</i><p hidden>Revue du notariat belge Rev not belge <br> Rev not b <i>Rev. not. belge <br> Rev. not. b.</i></p></td><td><i>Rev. not. belge <br> Rev. not. b.</i></td></tr>
+<tr><td><i>Revue du travail</i><p hidden>Revue du travail Rev trav <i>Rev. trav.</i></p></td><td><i>Rev. trav.</i></td></tr>
+<tr><td><i>Revue du Trésor</i><p hidden>Revue du Tresor Rev Tres <i>Rev. Trés.</i></p></td><td><i>Rev. Trés.</i></td></tr>
+<tr><td><i>Revue européenne de droit de la consommation</i><p hidden>Revue europeenne de droit de la consommation REDC RECO <i>R.E.D.C. <br> RECO</i></p></td><td><i>R.E.D.C. <br> RECO</i></td></tr>
+<tr><td><i>Revue européenne de l'environnement</i><p hidden>Revue europeenne de l'environnement Rev eur envir <i>Rev. eur. envir.</i></p></td><td><i>Rev. eur. envir.</i></td></tr>
+<tr><td><i>Revue francaise de droit administratif</i><p hidden>Revue francaise de droit administratif RFDA Rev fr dr adm <i>R.F.D.A. <br> Rev. fr. dr. adm.</i></p></td><td><i>R.F.D.A. <br> Rev. fr. dr. adm.</i></td></tr>
+<tr><td><i>Revue francaise de droit aérien</i><p hidden>Revue francaise de droit aerien Rev fr dr aerien <i>Rev. fr. dr. aérien</i></p></td><td><i>Rev. fr. dr. aérien</i></td></tr>
+<tr><td><i>Revue francaise de droit constitutionnel</i><p hidden>Revue francaise de droit constitutionnel Rev fr dr constit <i>Rev. fr. dr. constit.</i></p></td><td><i>Rev. fr. dr. constit.</i></td></tr>
+<tr><td><i>Revue générale de droit</i><p hidden>Revue generale de droit Rev gen dr <i>Rev. gén. dr.</i></p></td><td><i>Rev. gén. dr.</i></td></tr>
+<tr><td><i>Revue générale de droit civil belge</i><p hidden>Revue generale de droit civil belge RGDC <i>R.G.D.C.</i></p></td><td><i>R.G.D.C.</i></td></tr>
+<tr><td><i>Revue générale de droit international public</i><p hidden>Revue generale de droit international public Rev gen dr intern publ <i>Rev. gén. dr. intern. publ.</i></p></td><td><i>Rev. gén. dr. intern. publ.</i></td></tr>
+<tr><td><i>Revue générale de fiscalité</i><p hidden>Revue generale de fiscalite RGF <i>R.G.F.</i></p></td><td><i>R.G.F.</i></td></tr>
+<tr><td><i>Revue générale des assurances et des responsabilités</i><p hidden>Revue generale des assurances et des responsabilites RGAR <i>R.G.A.R.</i></p></td><td><i>R.G.A.R.</i></td></tr>
+<tr><td><i>Revue générale des assurances terrestres</i><p hidden>Revue generale des assurances terrestres Rev gen ass terr <i>Rev. gén. ass. terr.</i></p></td><td><i>Rev. gén. ass. terr.</i></td></tr>
+<tr><td><i>Revue générale du contentieux fiscal</i><p hidden>Revue generale du contentieux fiscal RGCF <i>R.G.C.F.</i></p></td><td><i>R.G.C.F.</i></td></tr>
+<tr><td><i>Revue historique du droit francais</i><p hidden>Revue historique du droit francais Rev hist droit <i>Rev. hist. droit</i></p></td><td><i>Rev. hist. droit</i></td></tr>
+<tr><td><i>Revue I.P.C.</i><p hidden>Revue IPC Rev IPC <i>Rev. I.P.C.</i></p></td><td><i>Rev. I.P.C.</i></td></tr>
+<tr><td><i>Revue interdisciplinaire d'études juridiques</i><p hidden>Revue interdisciplinaire d'etudes juridiques RIEJ <i>R.I.E.J.</i></p></td><td><i>R.I.E.J.</i></td></tr>
+<tr><td><i>Revue internationale de criminologie et de police technique et scientifique</i><p hidden>Revue internationale de criminologie et de police technique et scientifique Rev intern crim pol techn <i>Rev. intern. crim. pol. techn.</i></p></td><td><i>Rev. intern. crim. pol. techn.</i></td></tr>
+<tr><td><i>Revue internationale de criminologie et philosophie du droit pénal</i><p hidden>Revue internationale de criminologie et philosophie du droit penal Rev intern crim phil dr pen <i>Rev. intern. crim. phil. dr. pén.</i></p></td><td><i>Rev. intern. crim. phil. dr. pén.</i></td></tr>
+<tr><td><i>Revue internationale de droit comparé</i><p hidden>Revue internationale de droit compare RIDC Rev intern dr comp <i>R.I.D.C. <br> Rev. intern. dr. comp.</i></p></td><td><i>R.I.D.C. <br> Rev. intern. dr. comp.</i></td></tr>
+<tr><td><i>Revue internationale de droit contemporain</i><p hidden>Revue internationale de droit contemporain Rev dr contemp <i>Rev. dr. contemp.</i></p></td><td><i>Rev. dr. contemp.</i></td></tr>
+<tr><td><i>Revue internationale de droit économique</i><p hidden>Revue internationale de droit economique RIDE <i>R.I.D.E.</i></p></td><td><i>R.I.D.E.</i></td></tr>
+<tr><td><i>Revue internationale de droit pénal</i><p hidden>Revue internationale de droit penal Rev intern dr pen <i>Rev. intern. dr. pén.</i></p></td><td><i>Rev. intern. dr. pén.</i></td></tr>
+<tr><td><i>Revue internationale de la concurrence</i><p hidden>Revue internationale de la concurrence RIC <i>R.I.C.</i></p></td><td><i>R.I.C.</i></td></tr>
+<tr><td><i>Revue internationale de philosophie pénale et de criminologie de l'acte</i><p hidden>Revue internationale de philosophie penale et de criminologie de l'acte Rev intern phil pen <i>Rev. intern. phil. pén.</i></p></td><td><i>Rev. intern. phil. pén.</i></td></tr>
+<tr><td><i>Revue internationale de police criminelle</i><p hidden>Revue internationale de police criminelle Rev intern pol crim <i>Rev. intern. pol. crim.</i></p></td><td><i>Rev. intern. pol. crim.</i></td></tr>
+<tr><td><i>Revue internationale des droits de l'antiquité</i><p hidden>Revue internationale des droits de l'antiquite RIDA <i>R.I.D.A.</i></p></td><td><i>R.I.D.A.</i></td></tr>
+<tr><td><i>Revue internationale des sciences administratives</i><p hidden>Revue internationale des sciences administratives RISA Rev intern sc adm <i>R.I.S.A. <br> Rev. intern. sc. adm.</i></p></td><td><i>R.I.S.A. <br> Rev. intern. sc. adm.</i></td></tr>
+<tr><td><i>Revue internationale des services financiers / International Journal for Financial Services</i><p hidden>Revue internationale des services financiers International Journal for Financial Services RIFSIJFS <i>R.I.F.S.-I.J.F.S.</i></p></td><td><i>R.I.F.S.-I.J.F.S.</i></td></tr>
+<tr><td><i>Revue internationale du droit d'auteur</i><p hidden>Revue internationale du droit d'auteur RIDA <i>RIDA</i></p></td><td><i>RIDA</i></td></tr>
+<tr><td><i>Revue juridique de l'environnement</i><p hidden>Revue juridique de l'environnement Rev jur environ <i>Rev. jur. environ.</i></p></td><td><i>Rev. jur. environ.</i></td></tr>
+<tr><td><i>Revue juridique et économique de l'urbanisme et de l'environnement</i><p hidden>Revue juridique et economique de l'urbanisme et de l'environnement Rev urb <i>Rev. urb.</i></p></td><td><i>Rev. urb.</i></td></tr>
+<tr><td><i>Revue pratique des sociétés (civiles et commerciales)</i><p hidden>Revue pratique des societes civiles et commerciales Rev prat soc <i>Rev. prat. soc.</i></p></td><td><i>Rev. prat. soc.</i></td></tr>
+<tr><td><i>Revue pratique des sociétés / Tijdschrift voor Rechtspersoon en Venootschap</i><p hidden>Revue pratique des societes  Tijdschrift voor Rechtspersoon en Venootschap RPSTRV <i>R.P.S.-T.R.V.</i></p></td><td><i>R.P.S.-T.R.V.</i></td></tr>
+<tr><td><i>Revue pratique du droit commercial belge</i><p hidden>Revue pratique du droit commercial belge Rev prat dr comm <i>Rev. prat. dr. comm.</i></p></td><td><i>Rev. prat. dr. comm.</i></td></tr>
+<tr><td><i>Revue pratique du notariat</i><p hidden>Revue pratique du notariat Rev prat not <i>Rev. prat. not.</i></p></td><td><i>Rev. prat. not.</i></td></tr>
+<tr><td><i>Revue régionale de droit</i><p hidden>Revue regionale de droit RRD Rev reg dr <i>R.R.D. <br> Rev. rég. dr.</i></p></td><td><i>R.R.D. <br> Rev. rég. dr.</i></td></tr>
+<tr><td><i>Revue trimestrielle de droit civil</i><p hidden>Revue trimestrielle de droit civil Rev trim dr civ RTD civ <i>Rev. trim. dr. civ. <br> RTD civ.</i></p></td><td><i>Rev. trim. dr. civ. <br> RTD civ.</i></td></tr>
+<tr><td><i>Revue trimestrielle de droit commercial et de droit économique</i><p hidden>Revue trimestrielle de droit commercial et de droit economique Rev trim dr com RTD com <i>Rev. trim. dr. com. <br> RTD com.</i></p></td><td><i>Rev. trim. dr. com. <br> RTD com.</i></td></tr>
+<tr><td><i>Revue trimestrielle de droit européen</i><p hidden>Revue trimestrielle de droit europeen Rev trim dr europ Rev trim dr eur RTD eur <i>Rev. trim. dr. europ. <br> Rev. trim. dr. eur. <br> RTD eur.</i></p></td><td><i>Rev. trim. dr. europ. <br> Rev. trim. dr. eur. <br> RTD eur.</i></td></tr>
+<tr><td><i>Revue trimestrielle de droit familial</i><p hidden>Revue trimestrielle de droit familial Rev trim dr fam RTDF <i>Rev. trim. dr. fam. <br> R.T.D.F.</i></p></td><td><i>Rev. trim. dr. fam. <br> R.T.D.F.</i></td></tr>
+<tr><td><i>Revue trimestrielle des droits de l'homme</i><p hidden>Revue trimestrielle des droits de l'homme Rev trim DH Rev trim dr h <i>Rev. trim. D.H. <br> Rev. trim. dr. h.</i></p></td><td><i>Rev. trim. D.H. <br> Rev. trim. dr. h.</i></td></tr>
+<tr><td><i>Revue Ubiquité</i><p hidden>Revue Ubiquite Rev Ubiquite <i>Rev. Ubiquité</i></p></td><td><i>Rev. Ubiquité</i></td></tr>
+<tr><td><i>Revue universelle des droits de l'homme</i><p hidden>Revue universelle des droits de l'homme RUDH <i>R.U.D.H.</i></p></td><td><i>R.U.D.H.</i></td></tr>
+<tr><td><i>Revue van de Rijkswacht</i><p hidden>Revue van de Rijkswacht Rev Rw <i>Rev. Rw.</i></p></td><td><i>Rev. Rw.</i></td></tr>
+<tr><td>Rôle des référés<p hidden>Role des referes RR R.R.</p></td><td>R.R.</td></tr>
+<tr><td>Rôle des requêtes<p hidden>Role des requetes R req R. req.</p></td><td>R. req.</td></tr>
+<tr><td>Rôle général<p hidden>Role general RG R.G.</p></td><td>R.G.</td></tr>
+<tr><td>Rubrique<p hidden>Rubrique rubr rubr.</p></td><td>rubr.</td></tr>
+<tr><td><i>Samsom Actualités fiscales</i><p hidden>Samsom Actualites fiscales Samsom Act fisc <i>Samsom Act. fisc.</i></p></td><td><i>Samsom Act. fisc.</i></td></tr>
+<tr><td><i>Samsom Jurisprudence fiscal</i><p hidden>Samsom Jurisprudence fiscal Samsom Jur fisc <i>Samsom Jur. fisc.</i></p></td><td><i>Samsom Jur. fisc.</i></td></tr>
+<tr><td>Sans date<p hidden>Sans date sd s.d.</p></td><td>s.d.</td></tr>
+<tr><td>Sans lieu<p hidden>Sans lieu sl s.l.</p></td><td>s.l.</td></tr>
+<tr><td>Sans lieu ni date<p hidden>Sans lieu ni date slnd s.l.n.d.</p></td><td>s.l.n.d.</td></tr>
+<tr><td><i>Scolanews</i><p hidden>Scolanews Scolanews <i>Scolanews</i></p></td><td><i>Scolanews</i></td></tr>
+<tr><td>Section (d'une cour ou d'un tribunal)<p hidden>Section sect sect.</p></td><td>sect.</td></tr>
+<tr><td>Sénat<p hidden>Senat Sen Sén.</p></td><td>Sén.</td></tr>
+<tr><td>Sentence arbitrale<p hidden>Sentence arbitrale Sent arb Sent. arb.</p></td><td>Sent. arb.</td></tr>
+<tr><td>Service public fédéral<p hidden>Service public federal SPF SPF <br>S.P.F.</p></td><td>SPF <br>S.P.F.</td></tr>
+<tr><td>Session<p hidden>Session sess sess.</p></td><td>sess.</td></tr>
+<tr><td>Session extraordinaire<p hidden>Session extraordinaire sess extr sess. extr.</p></td><td>sess. extr.</td></tr>
+<tr><td>Session ordinaire<p hidden>Session ordinaire sess ord sess. ord.</p></td><td>sess. ord.</td></tr>
+<tr><td><i>Snelbericht. Handelsrecht</i><p hidden>Snelbericht Handelsrecht SH <i>S.H.</i></p></td><td><i>S.H.</i></td></tr>
+<tr><td><i>Sociaalrechtelijke kronieken</i><p hidden>Sociaalrechtelijke kronieken Soc Kron <i>Soc. Kron.</i></p></td><td><i>Soc. Kron.</i></td></tr>
+<tr><td><i>Sociale actualiteit</i><p hidden>Sociale actualiteit Soc Act <i>Soc. Act.</i></p></td><td><i>Soc. Act.</i></td></tr>
+<tr><td><i>Sociale Wegwijzer</i><p hidden>Sociale Wegwijzer Soc Weg <i>Soc. Weg.</i></p></td><td><i>Soc. Weg.</i></td></tr>
+<tr><td>Société a responsabilité limitée<p hidden>Societe a responsabilite limitee SRL S.R.L.</p></td><td>S.R.L.</td></tr>
+<tr><td>Société anonyme<p hidden>Societe anonyme SA S.A.</p></td><td>S.A.</td></tr>
+<tr><td>Société coopérative<p hidden>Societe cooperative SC S.C.</p></td><td>S.C.</td></tr>
+<tr><td>Société en commandite simple<p hidden>Societe en commandite simple SCS S.C.S.</p></td><td>S.C.S.</td></tr>
+<tr><td>Sommaire<p hidden>Sommaire somm somm.</p></td><td>somm.</td></tr>
+<tr><td>Sous la direction de<p hidden>sous la  direction de sous la dir de sous la dir. de</p></td><td>sous la dir. de</td></tr>
+<tr><td>Spécialement<p hidden>Specialement spec spéc.</p></td><td>spéc.</td></tr>
+<tr><td><i>Sport & Recht</i><p hidden>Sport & Recht Sport & Recht <i>Sport & Recht</i></p></td><td><i>Sport & Recht</i></td></tr>
+<tr><td><i>Standford Journal of Civil Rights and Civil Liberties</i><p hidden>Standford Journal of Civil Rights and Civil Liberties Stn JCRCL <i>Stn. J.C.R.C.L.</i></p></td><td><i>Stn. J.C.R.C.L.</i></td></tr>
+<tr><td><i>Studia Diplomatica</i><p hidden>Studia Diplomatica Stud Dipl <i>Stud. Dipl.</i></p></td><td><i>Stud. Dipl.</i></td></tr>
+<tr><td><i>Stukken</i><p hidden>Stukken Parl St Vl Parl <i>Parl. St. Vl. Parl.</i></p></td><td><i>Parl. St. Vl. Parl.</i></td></tr>
+<tr><td>Substitut<p hidden>Substitut Subst Subst.</p></td><td>Subst.</td></tr>
+<tr><td>Substitut de l'auditeur du travail<p hidden>Substitut de l'auditeur du travail Subst aud trav Subst. aud. trav.</p></td><td>Subst. aud. trav.</td></tr>
+<tr><td>Substitut de l'auditeur militaire<p hidden>Substitut de l auditeur militaire Subst aud mil Subst. aud. mil.</p></td><td>Subst. aud. mil.</td></tr>
+<tr><td>Substitut du procureur du Roi<p hidden>Substitut du procureur du Roi Subst proc Roi Subst. proc. Roi</p></td><td>Subst. proc. Roi</td></tr>
+<tr><td>Substitut du procureur général<p hidden>Substitut du procureur general Subst proc gen Subst. proc. gén.</p></td><td>Subst. proc. gén.</td></tr>
+<tr><td>Substitut général<p hidden>Substitut general Subst gen Subst. gén.</p></td><td>Subst. gén.</td></tr>
+<tr><td>Suivant(es)<p hidden>Suivantes suivants s s.</p></td><td>s.</td></tr>
+<tr><td>Supplément<p hidden>Supplement suppl suppl.</p></td><td>suppl.</td></tr>
+<tr><td>Suspendant<p hidden>Suspendant susp susp.</p></td><td>susp.</td></tr>
+<tr><td><i>Tax audit & accountancy</i><p hidden>Tax audit & accountancy TAA <i>T.A.A.</i></p></td><td><i>T.A.A.</i></td></tr>
+<tr><td>Taxe sur la valeur ajoutée<p hidden>Taxe sur la valeur ajoutee TVA T.V.A.</p></td><td>T.V.A.</td></tr>
+<tr><td><i>The Computer Law and Security report</i><p hidden>The Computer Law and Security report CLSR <i>C.L.S.R.</i></p></td><td><i>C.L.S.R.</i></td></tr>
+<tr><td><i>Tijdschrift der Arbeidsongevallen en van Sociaal- en Nijverheidsrecht</i><p hidden>Tijdschrift der Arbeidsongevallen en van Sociaal- en Nijverheidsrecht TASN <i>T.A.S.N.</i></p></td><td><i>T.A.S.N.</i></td></tr>
+<tr><td><i>Tijdschrift Estate Planning</i><p hidden>Tijdschrift Estate Planning TEP <i>T.E.P.</i></p></td><td><i>T.E.P.</i></td></tr>
+<tr><td><i>Tijdschrift Financieel Recht</i><p hidden>Tijdschrift Financieel Recht T Fin R <i>T. Fin. R.</i></p></td><td><i>T. Fin. R.</i></td></tr>
+<tr><td><i>Tijdschrift Huurrecht</i><p hidden>Tijdschrift Huurrecht T Huur <i>T. Huur.</i></p></td><td><i>T. Huur.</i></td></tr>
+<tr><td><i>Tijdschrift Rechtsdocumentatie</i><p hidden>Tijdschrift Rechtsdocumentatie TRD <i>T.R.D.</i></p></td><td><i>T.R.D.</i></td></tr>
+<tr><td><i>Tijdschrift Rechtsdocumentatie en -informatie</i><p hidden>Tijdschrift Rechtsdocumentatie en informatie TRD&I <i>T.R.D.&I.</i></p></td><td><i>T.R.D.&I.</i></td></tr>
+<tr><td><i>Tijdschrift Rechtshulp</i><p hidden>Tijdschrift Rechtshulp T rechtsh <i>T. rechtsh.</i></p></td><td><i>T. rechtsh.</i></td></tr>
+<tr><td><i>Tijdschrift van de Deskundige</i><p hidden>Tijdschrift van de Deskundige T Desk <i>T. Desk.</i></p></td><td><i>T. Desk.</i></td></tr>
+<tr><td><i>Tijdschrift van de Nationale Raad Orde van Geneesheren</i><p hidden>Tijdschrift van de Nationale Raad Orde van Geneesheren T Orde Geneesh <i>T. Orde Geneesh.</i></p></td><td><i>T. Orde Geneesh.</i></td></tr>
+<tr><td><i>Tijdschrift van de Ontvangers</i><p hidden>Tijdschrift van de Ontvangers T Ontv <i>T. Ontv.</i></p></td><td><i>T. Ontv.</i></td></tr>
+<tr><td><i>Tijdschrift van de Politierechters</i><p hidden>Tijdschrift van de Politierechters T Pol <i>T. Pol.</i></p></td><td><i>T. Pol.</i></td></tr>
+<tr><td><i>Tijdschrift van de Vrede- en Politierechters</i><p hidden>Tijdschrift van de Vrede en Politierechters T Vred <i>T. Vred.</i></p></td><td><i>T. Vred.</i></td></tr>
+<tr><td><i>Tijdschrift van de Werkrechtersraden</i><p hidden>Tijdschrift van de Werkrechtersraden T Wrr <i>T. Wrr.</i></p></td><td><i>T. Wrr.</i></td></tr>
+<tr><td><i>Tijdschrift Verkoop Vastgoed</i><p hidden>Tijdschrift Verkoop Vastgoed T VV <i>T. V.V.</i></p></td><td><i>T. V.V.</i></td></tr>
+<tr><td><i>Tijdschrift voor Aannemingsrecht</i><p hidden>Tijdschrift voor Aannemingsrecht T Aann <i>T. Aann.</i></p></td><td><i>T. Aann.</i></td></tr>
+<tr><td><i>Tijdschrift voor Aansprakelijkheid en Verzekering in het Wegverkeer</i><p hidden>Tijdschrift voor Aansprakelijkheid en Verzekering in het Wegverkeer TAVW <i>T.A.V.W.</i></p></td><td><i>T.A.V.W.</i></td></tr>
+<tr><td><i>Tijdschrift voor Accountants en Boekhouders</i><p hidden>Tijdschrift voor Accountants en Boekhouders T Acc <i>T. Acc.</i></p></td><td><i>T. Acc.</i></td></tr>
+<tr><td><i>Tijdschrift voor Agrarisch Recht</i><p hidden>Tijdschrift voor Agrarisch Recht T Agr R <i>T. Agr. R.</i></p></td><td><i>T. Agr. R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Appartements- en Immorecht</i><p hidden>Tijdschrift voor Appartements en Immorecht T App <i>T. App.</i></p></td><td><i>T. App.</i></td></tr>
+<tr><td><i>Tijdschrift voor Bank- en Financiewezen</i><p hidden>Tijdschrift voor Bank en Financiewezen T Bankw <i>T. Bankw.</i></p></td><td><i>T. Bankw.</i></td></tr>
+<tr><td><i>Tijdschrift voor Belgisch Burgerlijk Recht</i><p hidden>Tijdschrift voor Belgisch Burgerlijk Recht TBBR <i>T.B.B.R.</i></p></td><td><i>T.B.B.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Belgisch handelsrecht</i><p hidden>Tijdschrift voor Belgisch handelsrecht TBH <i>T.B.H.</i></p></td><td><i>T.B.H.</i></td></tr>
+<tr><td><i>Tijdschrift voor Belgisch mededinging</i><p hidden>Tijdschrift voor Belgisch mededinging TBM <i>T.B.M.</i></p></td><td><i>T.B.M.</i></td></tr>
+<tr><td><i>Tijdschrift voor Belgische Notarissen</i><p hidden>Tijdschrift voor Belgische Notarissen T Belg Not <i>T. Belg. Not.</i></p></td><td><i>T. Belg. Not.</i></td></tr>
+<tr><td><i>Tijdschrift voor Bestuurswetenschappen en Publiekrecht</i><p hidden>Tijdschrift voor Bestuurswetenschappen en Publiekrecht TBP <i>T.B.P.</i></p></td><td><i>T.B.P.</i></td></tr>
+<tr><td><i>Tijdschrift voor Bouwrecht en Onroerend Goed</i><p hidden>Tijdschrift voor Bouwrecht en Onroerend Goed TBO <i>T.B.O.</i></p></td><td><i>T.B.O.</i></td></tr>
+<tr><td><i>Tijdschrift voor Brugse Rechtspraak</i><p hidden>Tijdschrift voor Brugse Rechtspraak TBR <i>T.B.R.</i></p></td><td><i>T.B.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor de Vlaamse Gemeentesecretaris</i><p hidden>Tijdschrift voor de Vlaamse Gemeentesecretaris T VG <i>T. V.G.</i></p></td><td><i>T. V.G.</i></td></tr>
+<tr><td><i>Tijdschrift voor Economie en Management</i><p hidden>Tijdschrift voor Economie en Management TEM <i>T.E.M.</i></p></td><td><i>T.E.M.</i></td></tr>
+<tr><td><i>Tijdschrift voor Europees en Economisch Recht</i><br>(anciennement <i>Sociaal Economisch Wetgeving</i>)<p hidden>Tijdschrift voor Europees en Economisch Recht Sociaal Economisch Wetgeving SEW <i>S.E.W.</i></p></td><td><i>S.E.W.</i></td></tr>
+<tr><td><i>Tijdschrift voor Familierecht</i><p hidden>Tijdschrift voor Familierecht T Fam <i>T. Fam.</i></p></td><td><i>T. Fam.</i></td></tr>
+<tr><td><i>Tijdschrift voor Fiscaal Recht – Fiskofoon</i><p hidden>Tijdschrift voor Fiscaal Recht  Fiskofoon Fiskofoon TFR <i>Fiskofoon <br> T.F.R.</i></p></td><td><i>Fiskofoon <br> T.F.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Gemeenterecht</i><p hidden>Tijdschrift voor Gemeenterecht T Gem <i>T. Gem.</i></p></td><td><i>T. Gem.</i></td></tr>
+<tr><td><i>Tijdschrift voor Gentse Rechtspraak</i><p hidden>Tijdschrift voor Gentse Rechtspraak TGR <i>T.G.R.</i></p></td><td><i>T.G.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Gezondheidsrecht</i><p hidden>Tijdschrift voor Gezondheidsrecht T Gez <i>T. Gez.</i></p></td><td><i>T. Gez.</i></td></tr>
+<tr><td><i>Tijdschrift voor het Bankwezen</i><p hidden>Tijdschrift voor het Bankwezen T bankw <i>T. bankw.</i></p></td><td><i>T. bankw.</i></td></tr>
+<tr><td><i>Tijdschrift voor Jeugdrecht en Kinderrechten</i><p hidden>Tijdschrift voor Jeugdrecht en Kinderrechten TJK <i>T.J.K.</i></p></td><td><i>T.J.K.</i></td></tr>
+<tr><td><i>Tijdschrift voor Mensenrechten</i><p hidden>Tijdschrift voor Mensenrechten TvMR <i>T.v.M.R.</i></p></td><td><i>T.v.M.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Milieu Aansprakelijkheid</i><p hidden>Tijdschrift voor Milieu Aansprakelijkheid TMA <i>T.M.A.</i></p></td><td><i>T.M.A.</i></td></tr>
+<tr><td><i>Tijdschrift voor Milieurecht</i><p hidden>Tijdschrift voor Milieurecht TM TMR <i>TM <br> T.M.R.</i></p></td><td><i>TM <br> T.M.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Militair Recht en Oorlogsrecht</i><p hidden>Tijdschrift voor Militair Recht en Oorlogsrecht T Mil R <i>T. Mil. R.</i></p></td><td><i>T. Mil. R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Militair Strafrecht en Oorlogsrecht</i><p hidden>Tijdschrift voor Militair Strafrecht en Oorlogsrecht T Mil Strafr <i>T. Mil. Strafr.</i></p></td><td><i>T. Mil. Strafr.</i></td></tr>
+<tr><td><i>Tijdschrift voor Notarissen</i><p hidden>Tijdschrift voor Notarissen T Not <i>T. Not.</i></p></td><td><i>T. Not.</i></td></tr>
+<tr><td><i>Tijdschrift voor Onderwijsrecht en Onderwijsbeleid</i><p hidden>Tijdschrift voor Onderwijsrecht en Onderwijsbeleid TORB <i>T.O.R.B.</i></p></td><td><i>T.O.R.B.</i></td></tr>
+<tr><td><i>Tijdschrift voor Onroerendgoedrecht</i><p hidden>Tijdschrift voor Onroerendgoedrecht TOGOR <i>TOGOR</i></p></td><td><i>TOGOR</i></td></tr>
+<tr><td><i>Tijdschrift voor Privaatrecht</i><p hidden>Tijdschrift voor Privaatrecht TPR <i>T.P.R.</i></p></td><td><i>T.P.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Rechtsgeschiedenis</i><p hidden>Tijdschrift voor Rechtsgeschiedenis T rechtsgesch <i>T. rechtsgesch.</i></p></td><td><i>T. rechtsgesch.</i></td></tr>
+<tr><td><i>Tijdschrift voor Rechtshulp</i><p hidden>Tijdschrift voor Rechtshulp T Rechtsh <i>T. Rechtsh.</i></p></td><td><i>T. Rechtsh.</i></td></tr>
+<tr><td><i>Tijdschrift voor Rechtspersoon en Vennootschap</i><p hidden>Tijdschrift voor Rechtspersoon en Vennootschap TRV <i>T.R.V.</i></p></td><td><i>T.R.V.</i></td></tr>
+<tr><td><i>Tijdschrift voor Ruimtelijke Ordening en Stedenbouw</i><p hidden>Tijdschrift voor Ruimtelijke Ordening en Stedenbouw TROS <i>T.R.O.S.</i></p></td><td><i>T.R.O.S.</i></td></tr>
+<tr><td><i>Tijdschrift voor Sociaal Recht</i><p hidden>Tijdschrift voor Sociaal Recht TSR <i>T.S.R.</i></p></td><td><i>T.S.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Sociale Wetenschappen</i><p hidden>Tijdschrift voor Sociale Wetenschappen TSW <i>T.S.W.</i></p></td><td><i>T.S.W.</i></td></tr>
+<tr><td><i>Tijdschrift voor Sportrecht</i><p hidden>Tijdschrift voor Sportrecht T Sport <i>T. Sport</i></p></td><td><i>T. Sport</i></td></tr>
+<tr><td><i>Tijdschrift voor Strafrecht</i><p hidden>Tijdschrift voor Strafrecht T Strafr <i>T. Strafr.</i></p></td><td><i>T. Strafr.</i></td></tr>
+<tr><td><i>Tijdschrift voor Verzekeringen</i><p hidden>Tijdschrift voor Verzekeringen T VV TVER TvMR De Verz <i>T. V.V. <br> TVER <br>T.v.M.R. De Verz.</i></p></td><td><i>T. V.V. <br> TVER <br>T.v.M.R. De Verz.</i></td></tr>
+<tr><td><i>Tijdschrift voor Vreemdelingenrecht</i><p hidden>Tijdschrift voor Vreemdelingenrecht T Vreemd <i>T. Vreemd.</i></p></td><td><i>T. Vreemd.</i></td></tr>
+<tr><td><i>Tijdschrift voor Werkrechtersraden</i><p hidden>Tijdschrift voor Werkrechtersraden T Wrr <i>T. Wrr.</i></p></td><td><i>T. Wrr.</i></td></tr>
+<tr><td><i>Tijdschrift voor West-Vlaamse Rechtspraak</i><p hidden>Tijdschrift voor West-Vlaamse Rechtspraak TWVR <i>T.W.V.R.</i></p></td><td><i>T.W.V.R.</i></td></tr>
+<tr><td><i>Tijdschrift voor Wetgeving</i><p hidden>Tijdschrift voor Wetgeving T VW <i>T. V.W.</i></p></td><td><i>T. V.W.</i></td></tr>
+<tr><td>Tome<p hidden>Tome t t.</p></td><td>t.</td></tr>
+<tr><td>Traduction (ou traduit)<p hidden>Traduction traduit trad trad.</p></td><td>trad.</td></tr>
+<tr><td>Traité<p hidden>Traite Tr Tr.</p></td><td>Tr.</td></tr>
+<tr><td><i>Traité pratique de droit commercial</i><p hidden>Traite pratique de droit commercial TPDC <i>T.P.D.C.</i></p></td><td><i>T.P.D.C.</i></td></tr>
+<tr><td>Traité sur le fonctionnement de l'Union européenne<p hidden>Traite sur le fonctionnement de 'Union europeenne TFUE TFUE</p></td><td>TFUE</td></tr>
+<tr><td>Traité sur l'Union européenne<p hidden>Traite sur l'Union europeenne TUE TUE</p></td><td>TUE</td></tr>
+<tr><td>Travaux<p hidden>Travaux trav trav.</p></td><td>trav.</td></tr>
+<tr><td>Tribunal civil<p hidden>Tribunal civil Civ Civ.</p></td><td>Civ.</td></tr>
+<tr><td>Tribunal correctionnel<p hidden>Tribunal correctionnel Corr Corr.</p></td><td>Corr.</td></tr>
+<tr><td>Tribunal d'arrondissement<p hidden>Tribunal d'arrondissement Trib arr Trib. arr.</p></td><td>Trib. arr.</td></tr>
+<tr><td>Tribunal de commerce<p hidden>Tribunal de commerce Comm Comm.</p></td><td>Comm.</td></tr>
+<tr><td>Tribunal de commerce francophone de Bruxelles<p hidden>Tribunal de commerce francophone de Bruxelles Comm Bruxelles fr Comm. Bruxelles fr.</p></td><td>Comm. Bruxelles fr.</td></tr>
+<tr><td>Tribunal de commerce néerlandophone de Bruxelles<p hidden>Tribunal de commerce neerlandophone de Bruxelles Comm Brussel nl Comm. Brussel nl.</p></td><td>Comm. Brussel nl.</td></tr>
+<tr><td>Tribunal de grande instance<p hidden>Tribunal de grande instance Trib gr inst Trib. gr. inst.</p></td><td>Trib. gr. inst.</td></tr>
+<tr><td>Tribunal de la famille<p hidden>Tribunal de la famille Trib fam Trib. fam.</p></td><td>Trib. fam.</td></tr>
+<tr><td>Tribunal de la fonction publique de l'Union européenne<p hidden>Tribunal de la fonction publique de l'Union europeenne Trib fonct publ UE Trib. fonct. publ. U.E.</p></td><td>Trib. fonct. publ. U.E.</td></tr>
+<tr><td>Tribunal de la jeunesse<p hidden>Tribunal de la jeunesse Trib jeun Trib. jeun.</p></td><td>Trib. jeun.</td></tr>
+<tr><td>Tribunal de l'application des peines<p hidden>Tribunal de l'application des peines Trib app peines Trib. app. peines</p></td><td>Trib. app. peines</td></tr>
+<tr><td>Tribunal de l'entreprise<p hidden>Tribunal de l'entreprise trib entr trib. entr.</p></td><td>trib. entr.</td></tr>
+<tr><td>Tribunal de police<p hidden>Tribunal de police Pol Pol.</p></td><td>Pol.</td></tr>
+<tr><td>Tribunal de police francophone de Bruxelles<p hidden>Tribunal de police francophone de Bruxelles Pol Bruxelles fr Pol. Bruxelles fr.</p></td><td>Pol. Bruxelles fr.</td></tr>
+<tr><td>Tribunal de police néerlandophone de Bruxelles<p hidden>Tribunal de police neerlandophone de Bruxelles Pol Brussel nl Pol. Brussel nl.</p></td><td>Pol. Brussel nl.</td></tr>
+<tr><td>Tribunal de première instance<p hidden>Tribunal de premiere instance Civ Civ.</p></td><td>Civ.</td></tr>
+<tr><td>Tribunal de première instance de l'Union européenne<p hidden>Tribunal de premiere instance de l'Union europeenne TPIUE Trib UE T.P.I.U.E.<br>Trib. U.E.</p></td><td>T.P.I.U.E.<br>Trib. U.E.</td></tr>
+<tr><td>Tribunal de première instance des Communautés européennes<p hidden>Tribunal de premiere instance des Communautes europeennes TPICE Trib CE T.P.I.C.E. <br>Trib. C.E.</p></td><td>T.P.I.C.E. <br>Trib. C.E.</td></tr>
+<tr><td>Tribunal de première instance francophone de Bruxelles<p hidden>Tribunal de premiere instance francophone de Bruxelles Civ Bruxelles fr Civ. Bruxelles fr.</p></td><td>Civ. Bruxelles fr.</td></tr>
+<tr><td>Tribunal de première instance néerlandophone de Bruxelles<p hidden>Tribunal de premiere instance neerlandophone de Bruxelles Civ Brussel nl Civ. Brussel nl.</p></td><td>Civ. Brussel nl.</td></tr>
+<tr><td>Tribunal d'instance<p hidden>Tribunal d'instance Trib inst Trib. inst.</p></td><td>Trib. inst.</td></tr>
+<tr><td>Tribunal du travail<p hidden>Tribunal du travail Trib trav Trib. trav.</p></td><td>Trib. trav.</td></tr>
+<tr><td>Tribunal du travail francophone de Bruxelles<p hidden>Tribunal du travail francophone de Bruxelles Trib trav Bruxelles fr Trib. trav. Bruxelles fr.</p></td><td>Trib. trav. Bruxelles fr.</td></tr>
+<tr><td>Tribunal du travail néerlandophone de Bruxelles<p hidden>Tribunal du travail neerlandophone de Bruxelles Trib trav Brussel nl Trib. trav. Brussel nl.</p></td><td>Trib. trav. Brussel nl.</td></tr>
+<tr><td>Tribunal pénal international<p hidden>Tribunal penal international TPI T.P.I.</p></td><td>T.P.I.</td></tr>
+<tr><td>Tribunal pénal international pour le Rwanda<p hidden>Tribunal penal international pour le Rwanda TPIR T.P.I.R.</p></td><td>T.P.I.R.</td></tr>
+<tr><td>Tribunal pénal international pour l'Ex-Yougoslavie<p hidden>Tribunal penal international pour l'Ex-Yougoslavie TPIY T.P.I.Y.</p></td><td>T.P.I.Y.</td></tr>
+<tr><td><i>Turnhouts rechtsleven</i><p hidden>Turnhouts rechtsleven Turnh rechtsl <i>Turnh. rechtsl.</i></p></td><td><i>Turnh. rechtsl.</i></td></tr>
+<tr><td>Union européenne<p hidden>Union europeenne UE U.E.</p></td><td>U.E.</td></tr>
+<tr><td><i>Union libre – Commentaire pratique</i><p hidden>Union libre  Commentaire pratique Union libre  Commentaire pratique <i>Union libre – Commentaire pratique</i></p></td><td><i>Union libre – Commentaire pratique</i></td></tr>
+<tr><td><i>Vennootschapsrecht en fiscaliteit</i><p hidden>Vennootschapsrecht en fiscaliteit V & F <i>V. & F.</i></p></td><td><i>V. & F.</i></td></tr>
+<tr><td><i>Verbo (mot clé)</i><p hidden>Verbo v° mot cle <i>v°</i></p></td><td><i>v°</i></td></tr>
+<tr><td><i>Verkeer, aansprakelijkheid, verzekering</i><p hidden>Verkeer, aansprakelijkheid, verzekering VAV <i>V.A.V.</i></p></td><td><i>V.A.V.</i></td></tr>
+<tr><td><i>Verkeersrecht – Jurisprudentie</i><p hidden>Verkeersrecht  Jurisprudentie Verkeersrecht <i>Verkeersrecht</i></p></td><td><i>Verkeersrecht</i></td></tr>
+<tr><td><i>Vermogensplanning in de praktijk</i><p hidden>Vermogensplanning in de praktijk VIP <i>V.I.P.</i></p></td><td><i>V.I.P.</i></td></tr>
+<tr><td><i>Verslagen en debatten</i><p hidden>Verslagen en debatten Versl CSW <i>Versl. C.S.W.</i></p></td><td><i>Versl. C.S.W.</i></td></tr>
+<tr><td><i>Versus</i><p hidden>Versus v <i>v.</i></p></td><td><i>v.</i></td></tr>
+<tr><td><i>Vigiles</i><p hidden>Vigiles Vigiles <i>Vigiles</i></p></td><td><i>Vigiles</i></td></tr>
+<tr><td><i>Vigiles (jaarboek)</i><p hidden>Vigiles jaarboek Vigiles Jb <i>Vigiles Jb.</i></p></td><td><i>Vigiles Jb.</i></td></tr>
+<tr><td><i>Vlaams Jurist Vandaag</i><p hidden>Vlaams Jurist Vandaag Vl Jurist <i>Vl. Jurist.</i></p></td><td><i>Vl. Jurist.</i></td></tr>
+<tr><td><i>Vlaams Tijdschrift voor Gezondheidsrecht</i><p hidden>Vlaams Tijdschrift voor Gezondheidsrecht Vl t gez <i>Vl. t. gez.</i></p></td><td><i>Vl. t. gez.</i></td></tr>
+<tr><td>Volume<p hidden>Volume vol vol.</p></td><td>vol.</td></tr>
+<tr><td>Voyez<p hidden>Voyez Voy V Voy. <br> V.</p></td><td>Voy. <br> V.</td></tr>
+<tr><td><i>VZW Info</i><p hidden>VZW Info VZW Info <i>VZW Info</i></p></td><td><i>VZW Info</i></td></tr>
+<tr><td><i>Yale human rights and development law journal</i><p hidden>Yale human rights and development law journal YHRDLJ <i>Y.H.R.D.L.J.</i></p></td><td><i>Y.H.R.D.L.J.</i></td></tr>
+</table> 
+    
+
+      </div>
+
+    </div>
+
+          <footer></footer>
+      </div>
+
+ 
+  <div  class="paragraph paragraph--type--component-base-text paragraph--view-mode--default">
+          <header>
+              </header>
+    
+    <div id="paragraph_693139ac8fd44" >
+        <div class="base-text-body paragraph__text rich-text text_with-html">
+    <p>La liste ci-dessus se fonde sur la liste des abréviations des <em>Leçons de méthodologie juridique </em>de G. WILLEMS, S. WATTIER, E. CECI, M. SPITAELS et A. TOUSSAINT (Précis de la Faculté de droit de l’Université catholique de Louvain, 3<sup>e</sup> éd., Bruxelles, Larcier-Intersentia, 2024, pp. 299-332, reproduites ici avec l’aimable autorisation de leurs auteurs et autrices et des Éditions Larcier-Intersentia.</p><p>Par ailleurs, la liste complète est disponible <a href="https://www.stradalex.com/fr/sl_mono/toc/IT0010091">en ligne sur Strada lex</a> et en bibliothèque, en rayon et au comptoir d’accueil (cote AD 11 LECON BEL).</p><p>Autres sources et outils utiles :</p><ul><li><a href="http://www.law.kuleuven.be/rechtsaf/" target="_blank"><strong>Rechtsaf.be</strong></a> : banque de données mises au point par la Bibliothèque de droit de la KULeuven</li><li>La liste d’abréviations disponible sur la page REFLEX du Syndicat national de l’édition français : <a href="https://reflex.sne.fr/guide"><strong>reflex.sne.fr/guide</strong></a></li><li>(University of) Cardiff Index to Legal Abreviations : <a href="http://www.legalabbrevs.cardiff.ac.uk/"><strong>legalabbrevs.cardiff.ac.uk</strong></a></li><li>P. DUSART, F. LEURQUIN-DE VISSCHER, M. MASSET et P. QUERTAINMONT, <em>Guide des citations, références et abréviations juridiques</em> (sous la dir. de L. INGBER), 6e éd., Bruxelles, Kluwer, 2017.<ul><li><a href="https://jura.kluwer.be/secure/documentview.aspx?id=df300221925">Accès en ligne sur Jura</a> (après identification)</li><li>Cote en bibliothèque : <strong>AD 11 GUIDE</strong></li></ul></li><li>A. DE THEUX, I. KOVALOVSZKY et N. BERNARD, <em>Précis de méthodologie juridique – Les sources documentaires du droit</em>, 2e éd., Bruxelles, éd. F.U.S.L., 2000, p. 663 et s.<ul><li>Cote en bibliothèque : <strong>AD 011 de TH</strong></li></ul></li></ul>
+  </div>
+    </div>
+</body>
+</html>
